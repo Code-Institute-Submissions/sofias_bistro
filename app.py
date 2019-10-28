@@ -1,10 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
 import pymongo
+import re
+from bson.objectid import ObjectId 
 
 #Retrieving the database environment variables
 MONGO_URI = os.getenv('MONGO_URI')
-DATABASE_NAME = 'sofias_bistro'
+DATABASE_NAME = 'restaurant_reviews'
+RESTAURANT = 'restaurant'
+MENU = 'menu'
+REVIEW = 'reviews'
 
 # Creating database connection
 conn = pymongo.MongoClient(MONGO_URI)
@@ -31,8 +36,9 @@ def about():
 #Routing Menu Page
 @app.route('/menu')
 def menu():
-    
-    return render_template('menu.html')
+    """Fetch all menu items"""
+    results = conn[DATABASE_NAME][MENU].find({})
+    return render_template('menu.html', data=results)
 
 
 #Routing Menu Page
@@ -41,6 +47,9 @@ def contact():
     
     return render_template('contact.html')
     
+
+
+
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
