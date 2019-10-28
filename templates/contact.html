@@ -7,7 +7,7 @@
 
 <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link disabled" href={{url_for('index')}}>Home</a>
+    <a class="nav-link" href={{url_for('index')}}>Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href={{url_for('about')}}>About</a>
@@ -16,10 +16,10 @@
     <a class="nav-link" href={{url_for('menu')}}>Menu</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href={{url_for('contact')}}>Contact</a>
+    <a class="nav-link disabled" href={{url_for('contact')}}>Contact</a>
   </li>
 </ul>
-<h1 class="nav justify-content-center">THIS IS THE HOMEPAGE</h1>
+<h1 class="nav justify-content-center">THIS IS CONTACT PAGE</h1>
 {%endblock%}
 
 {%block content%}

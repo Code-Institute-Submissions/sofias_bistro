@@ -21,9 +21,26 @@ def index():
     return render_template('index.html')
 
 
+#Routing About Page
+@app.route('/about')
+def about():
+    
+    return render_template('about.html')
 
 
+#Routing Menu Page
+@app.route('/menu')
+def menu():
+    
+    return render_template('menu.html')
 
+
+#Routing Menu Page
+@app.route('/contact')
+def contact():
+    
+    return render_template('contact.html')
+    
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
