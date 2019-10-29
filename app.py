@@ -9,7 +9,7 @@ MONGO_URI = os.getenv('MONGO_URI')
 DATABASE_NAME = 'restaurant_reviews'
 RESTAURANT = 'restaurant'
 MENU = 'menu'
-REVIEW = 'reviews'
+REVIEWS = 'reviews'
 
 # Creating database connection
 conn = pymongo.MongoClient(MONGO_URI)
@@ -45,7 +45,7 @@ def menu():
     
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
 
-#Routing Menu Page
+#Routing Contact Page
 @app.route('/contact')
 def contact():
     
@@ -53,12 +53,17 @@ def contact():
     
 
 #Routing Reviews Page
-@app.route('/reviews/<menu_item_id>')
+@app.route('/menu/<menu_item_id>/reviews')
 def see_reviews(menu_item_id):
     results = conn[DATABASE_NAME][MENU].find_one({
         '_id': ObjectId(menu_item_id)
     })
-    return render_template('reviews.html', results=results)
+    
+    results2 = conn[DATABASE_NAME][REVIEWS].aggregate([{
+        "$match": { 'menu_item_id': ObjectId(menu_item_id) }
+    }])
+    
+    return render_template('reviews.html', item_results=results, reviews=results2)
 
 
 
