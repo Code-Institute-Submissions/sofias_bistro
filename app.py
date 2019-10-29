@@ -52,7 +52,7 @@ def contact():
     return render_template('contact.html')
     
 
-#Routing Reviews Page
+#Routing Reviews Page and displaying form for adding review
 @app.route('/menu/<menu_item_id>/reviews')
 def see_reviews(menu_item_id):
     results = conn[DATABASE_NAME][MENU].find_one({
@@ -65,6 +65,16 @@ def see_reviews(menu_item_id):
     
     return render_template('reviews.html', item_results=results, reviews=results2)
 
+@app.route('/menu/reviews/new')
+def add_review():
+    
+    # visit_date = request.form.get('visit_date')
+    # reviewer_name = request.form.get('reviewer_name')
+    # reviewer_email = request.form.get('reviewer_email')
+    # rating = request.form.get('rating')
+    # comment = request.form.get('comment')
+    
+    return render_template('add_review.html')
 
 
 # "magic code" -- boilerplate
