@@ -36,9 +36,14 @@ def about():
 #Routing Menu Page
 @app.route('/menu')
 def menu():
-    """Fetch all menu items"""
-    results = conn[DATABASE_NAME][MENU].find({})
-    return render_template('menu.html', data=results)
+    """#Fetch all menu items by categories and display them in alphabetical order"""
+    appetisers = conn[DATABASE_NAME][MENU].find({'item_category': 'Appetiser'}).sort('item_name', pymongo.ASCENDING)
+    pastas = conn[DATABASE_NAME][MENU].find({'item_category': 'Pasta'}).sort('item_name', pymongo.ASCENDING)
+    pizzas = conn[DATABASE_NAME][MENU].find({'item_category': 'Pizza'}).sort('item_name', pymongo.ASCENDING)
+    entrees = conn[DATABASE_NAME][MENU].find({'item_category': 'Entree'}).sort('item_name', pymongo.ASCENDING)    
+    desserts = conn[DATABASE_NAME][MENU].find({'item_category': 'Dessert'}).sort('item_name', pymongo.ASCENDING)  
+    
+    return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
 
 
 #Routing Menu Page

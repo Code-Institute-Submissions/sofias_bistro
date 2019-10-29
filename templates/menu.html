@@ -24,16 +24,84 @@
 {%block content%}
 
 <div class="container mt-2 pt-2">
-{%for d in data%}
+
+<!--Appetisers-->
+<div>
+<h2>Appetisers</h2>
+{%for each_appetiser in appetisers%}
 
 <div class="media">
-  <img src="{{d['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+
+  <img src="{{each_appetiser['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
   <div class="media-body">
-    <h5 class="mt-0">{{d['item_name']}}</h5>
-    <p>{{d['item_description']}}</p>
+    <h5 class="mt-0">{{each_appetiser['item_name']}}</h5>
+    <p>{{each_appetiser['item_description']}}</p>
   </div>
 </div>
-  
+  {%endfor%}
+</div>
+
+<!--Pastas-->
+<div>
+<h2>Pastas</h2>
+{%for each_pasta in pastas%}
+
+<div class="media">
+
+  <img src="{{each_pasta['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+  <div class="media-body">
+    <h5 class="mt-0">{{each_pasta['item_name']}}</h5>
+    <p>{{each_pasta['item_description']}}</p>
+  </div>
+</div>
+  {%endfor%}
+</div>
+
+<!--Pizzas-->
+<div>
+<h2>Pizzas</h2>
+{%for each_pizza in pizzas%}
+
+<div class="media">
+
+  <img src="{{each_pizza['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+  <div class="media-body">
+    <h5 class="mt-0">{{each_pizza['item_name']}}</h5>
+    <p>{{each_pizza['item_description']}}</p>
+  </div>
+</div>
+  {%endfor%}
+</div>
+
+<!--Entrees-->
+<div>
+<h2>Entrees</h2>
+{%for each_entree in entrees%}
+
+<div class="media">
+
+  <img src="{{each_entree['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+  <div class="media-body">
+    <h5 class="mt-0">{{each_entree['item_name']}}</h5>
+    <p>{{each_entree['item_description']}}</p>
+  </div>
+</div>
+  {%endfor%}
+</div>
+
+<!--Desserts-->
+<div>
+<h2>Desserts</h2>
+{%for each_dessert in desserts%}
+
+<div class="media">
+
+  <img src="{{each_dessert['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+  <div class="media-body">
+    <h5 class="mt-0">{{each_dessert['item_name']}}</h5>
+    <p>{{each_dessert['item_description']}}</p>
+  </div>
+</div>
   {%endfor%}
 </div>
 
