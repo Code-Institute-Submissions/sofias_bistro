@@ -26,83 +26,91 @@
 <div class="container mt-2 pt-2">
 
 <!--Appetisers-->
-<div>
+<div class="pt-4">
 <h2>Appetisers</h2>
-{%for each_appetiser in appetisers%}
+
 
 <div class="media">
-
+{%for each_appetiser in appetisers%}
   <img src="{{each_appetiser['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
   <div class="media-body">
     <h5 class="mt-0">{{each_appetiser['item_name']}}</h5>
     <p>{{each_appetiser['item_description']}}</p>
   </div>
+  <a href="{{url_for('see_reviews', menu_item_id=each_appetiser['_id'])}}" class="btn btn-primary">Reviews</a>   
+{%endfor%}
 </div>
-  {%endfor%}
+
+
+
 </div>
 
 <!--Pastas-->
 <div>
 <h2>Pastas</h2>
-{%for each_pasta in pastas%}
+
 
 <div class="media">
-
+{%for each_pasta in pastas%}
   <img src="{{each_pasta['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
   <div class="media-body">
     <h5 class="mt-0">{{each_pasta['item_name']}}</h5>
     <p>{{each_pasta['item_description']}}</p>
   </div>
+    {%endfor%}
 </div>
-  {%endfor%}
+
 </div>
 
 <!--Pizzas-->
 <div>
 <h2>Pizzas</h2>
-{%for each_pizza in pizzas%}
+
 
 <div class="media">
-
+{%for each_pizza in pizzas%}
   <img src="{{each_pizza['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
   <div class="media-body">
     <h5 class="mt-0">{{each_pizza['item_name']}}</h5>
     <p>{{each_pizza['item_description']}}</p>
   </div>
+  {%endfor%}  
 </div>
-  {%endfor%}
+
 </div>
 
 <!--Entrees-->
 <div>
 <h2>Entrees</h2>
-{%for each_entree in entrees%}
+
 
 <div class="media">
-
+{%for each_entree in entrees%}
   <img src="{{each_entree['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
   <div class="media-body">
     <h5 class="mt-0">{{each_entree['item_name']}}</h5>
     <p>{{each_entree['item_description']}}</p>
   </div>
+  {%endfor%}  
 </div>
-  {%endfor%}
+
 </div>
 
 <!--Desserts-->
 <div>
 <h2>Desserts</h2>
-{%for each_dessert in desserts%}
+
 
 <div class="media">
-
+{%for each_dessert in desserts%}
   <img src="{{each_dessert['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
   <div class="media-body">
     <h5 class="mt-0">{{each_dessert['item_name']}}</h5>
     <p>{{each_dessert['item_description']}}</p>
   </div>
+    {%endfor%}
 </div>
-  {%endfor%}
+
 </div>
 
 {%endblock%}

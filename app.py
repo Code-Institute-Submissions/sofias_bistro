@@ -45,7 +45,6 @@ def menu():
     
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
 
-
 #Routing Menu Page
 @app.route('/contact')
 def contact():
@@ -53,6 +52,13 @@ def contact():
     return render_template('contact.html')
     
 
+#Routing Reviews Page
+@app.route('/reviews/<menu_item_id>')
+def see_reviews(menu_item_id):
+    results = conn[DATABASE_NAME][MENU].find_one({
+        '_id': ObjectId(menu_item_id)
+    })
+    return render_template('reviews.html', results=results)
 
 
 
