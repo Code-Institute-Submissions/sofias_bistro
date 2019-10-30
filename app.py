@@ -71,8 +71,11 @@ def process_added_review():
         
     visit_date = request.form.get('visit_date')
     reviewer_name = request.form.get('reviewer_name')
+    dish = request.form.get('menu_item')
+    rating = request.form.get('rating')
     comment = request.form.get('comment')
 
+    print(visit_date, reviewer_name, dish, rating, comment)
     return render_template("index.html")
 
 #Routing page of reviews for each menu item
