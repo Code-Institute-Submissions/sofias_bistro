@@ -48,16 +48,34 @@ def menu():
 @app.route('/reviews/new')
 def add_review():
     
-    return render_template('add_review.html')
+    rating = request.args.get('rating')
+    dish = request.args.get('menu_item')
+    
+    all_ratings = ["1", "2", "3", "4", "5"]
+    all_menu_items = ["Tomato Bruschetta", "Sofia's Caprese Salad", "House Salad", "Ravioli Ai Funghi", "Spaghetti Ai Frutti di Marre", "Margherita", "Diavola", "Salmone Al Griglia", "Veal Buon Appetito", "Tiramisu", "Chocolate Coffee Cake"]
+
+    cursor = conn[DATABASE_NAME][MENU].find()
+    
+    return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items, result=cursor)
 
 #Routing Contact Page
 @app.route('/contact')
 def contact():
     
     return render_template('contact.html')
-    
 
-#Routing Reviews Page and displaying form for adding review
+    
+#Routing to process newly created review
+@app.route('/reviews/new', methods=["POST"])
+def process_added_review():
+        
+    visit_date = request.form.get('visit_date')
+    reviewer_name = request.form.get('reviewer_name')
+    comment = request.form.get('comment')
+
+    return render_template("index.html")
+
+#Routing page of reviews for each menu item
 @app.route('/menu/<menu_item_id>/reviews')
 def see_reviews(menu_item_id):
     results = conn[DATABASE_NAME][MENU].find_one({
@@ -72,16 +90,7 @@ def see_reviews(menu_item_id):
 
 
 
-@app.route('/menu/reviews/new', methods=["POST"])
-def process_added_review():
-        
-    visit_date = request.form.get('visit_date')
-    reviewer_name = request.form.get('reviewer_name')
-    reviewer_email = request.form.get('reviewer_email')
-    rating = request.form.get('rating')
-    comment = request.form.get('comment')
-    
-    return (visit_date + reviewer_name + reviewer_email + rating + comment)
+
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':

@@ -1,19 +1,42 @@
 <div class="form-group">
-    <label class='label' for="restaurant-name">Visit Date:</label>
-    <input type="text" class="form-control" id="visit-date" name="visit_date" placeholder="Enter visited date">
-</div>
-<div class="form-group">
     <label for="reviewer-name">Name</label>
     <input type="text" class="form-control" id="reviewer-name" name="reviewer_name" placeholder="Enter your name">
 </div>
+
+<div class="form-group">
+    <label class='label' for="restaurant-name">Visit Date:</label>
+    <input type="text" class="form-control" id="visit-date" name="visit_date" placeholder="Enter visited date">
+</div>
+
+<div class="form-group">
+    <label for="menu_item">Select Dish</label>
+    <select class="form-control" name="menu_item" id="menu-item">
+      <option>Select Dish</option>
+      {%for m in all_menu_items %}
+         
+         <option
+         {%if menu_item == m %}
+         selected
+         {%endif%}
+         
+         >{{m}}</option>
+      {%endfor%}
+    </select>
+</div>
+
 <div class="form-group">
     <label for="rating">Rate the dish</label>
-    <select class="form-control" id="rating">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="form-control" name="rating" id="rating">
+      <option>Rate the dish</option>
+      {%for r in all_ratings %}
+         
+         <option
+         {%if rating == r %}
+         selected
+         {%endif%}
+         
+         >{{r}}</option>
+      {%endfor%}
     </select>
 </div>
 <div class="form-group">
