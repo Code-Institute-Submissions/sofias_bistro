@@ -45,6 +45,11 @@ def menu():
     
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
 
+@app.route('/reviews/new')
+def add_review():
+    
+    return render_template('add_review.html')
+
 #Routing Contact Page
 @app.route('/contact')
 def contact():
@@ -65,17 +70,18 @@ def see_reviews(menu_item_id):
     
     return render_template('reviews.html', item_results=results, reviews=results2)
 
-@app.route('/menu/reviews/new')
-def add_review():
-    
-    # visit_date = request.form.get('visit_date')
-    # reviewer_name = request.form.get('reviewer_name')
-    # reviewer_email = request.form.get('reviewer_email')
-    # rating = request.form.get('rating')
-    # comment = request.form.get('comment')
-    
-    return render_template('add_review.html')
 
+
+@app.route('/menu/reviews/new', methods=["POST"])
+def process_added_review():
+        
+    visit_date = request.form.get('visit_date')
+    reviewer_name = request.form.get('reviewer_name')
+    reviewer_email = request.form.get('reviewer_email')
+    rating = request.form.get('rating')
+    comment = request.form.get('comment')
+    
+    return (visit_date + reviewer_name + reviewer_email + rating + comment)
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
