@@ -14,12 +14,12 @@
       <option>Select Dish</option>
       {%for m in all_menu_items %}
          
-         <option
+         <option value='{{m['_id']}}'
          {%if menu_item == m %}
          selected
          {%endif%}
          
-         >{{m}}</option>
+         >{{m['item_name']}}</option>
       {%endfor%}
     </select>
 </div>

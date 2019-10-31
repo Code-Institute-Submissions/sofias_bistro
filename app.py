@@ -3,6 +3,7 @@ import os
 import pymongo
 import re
 from bson.objectid import ObjectId 
+from datetime import datetime
 
 #Retrieving the database environment variables
 MONGO_URI = os.getenv('MONGO_URI')
@@ -46,17 +47,32 @@ def menu():
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
 
 @app.route('/reviews/new')
-def add_review():
+def add_review(menu_item_id):
     
     rating = request.args.get('rating')
     dish = request.args.get('menu_item')
     
     all_ratings = ["1", "2", "3", "4", "5"]
-    all_menu_items = ["Tomato Bruschetta", "Sofia's Caprese Salad", "House Salad", "Ravioli Ai Funghi", "Spaghetti Ai Frutti di Marre", "Margherita", "Diavola", "Salmone Al Griglia", "Veal Buon Appetito", "Tiramisu", "Chocolate Coffee Cake"]
-
-    cursor = conn[DATABASE_NAME][MENU].find()
+    all_menu_items = conn[DATABASE_NAME][MENU].find()
     
-    return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items, result=cursor)
+    new_review = {
+        'date': datetime.strptime('2019-01-01'),
+        'reviewer_name': 'James',
+        'rating': '5',
+        'comment': "Some reviews"
+    }
+    
+    insert_review = conn[DATABASE_NAME][MENU].update(
+        {
+            '_id': ObjectId(menu_item_id)
+        },
+        {'$push': {
+            'reviews': new_review
+        }}
+        )
+    
+    print(new_review)
+    return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items, insert_review=insert_review)
 
 #Routing Contact Page
 @app.route('/contact')
@@ -75,7 +91,11 @@ def process_added_review():
     rating = request.form.get('rating')
     comment = request.form.get('comment')
 
-    print(visit_date, reviewer_name, dish, rating, comment)
+    # print(visit_date, reviewer_name, dish, rating, comment)
+    #Inserting values from review form fields into Mongo database
+    conn[DATABASE_NAME][MENU].insert({
+        
+    })
     return render_template("index.html")
 
 #Routing page of reviews for each menu item
