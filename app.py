@@ -63,27 +63,26 @@ def process_add_review():
     all_ratings = ["1", "2", "3", "4", "5"]
     all_menu_items = conn[DATABASE_NAME][MENU].find()    
     
-
-
+    menu_item_id = request.form.get('item_name')
+    
     # visit_date = request.form.get('visit_date')    
     # reviewer_name = request.form.get('reviewer_name')
     # rating = request.args.get('rating')
     # comment = request.form.get('comment')
     
     new_review = {
-        'menu_item_id': request.form.get('item_name'),
         'date': request.form.get('visit_date'),
         'reviewer_name': request.form.get('reviewer_name'),
         'rating': request.form.get('rating'),
         'comment': request.form.get('comment')
     }
 
-    # insert_review = conn[DATABASE_NAME][MENU].update({
-    #     "$match": {'_id': ObjectId(request.form.get('item_name'))}},
-    #     {'$push': {'reviews': new_review}})
+    insert_review = conn[DATABASE_NAME][MENU].update({
+        '_id': ObjectId(menu_item_id)},
+        {'$push': {'reviews': new_review}})
     
-    return new_review 
-    # return render_template('index.html', new_review=new_review, insert_review=insert_review)    
+    # return new_review 
+    return render_template('index.html', new_review=new_review, insert_review=insert_review)    
 
     
 
@@ -97,15 +96,10 @@ def contact():
 #Routing page of reviews for each menu item
 @app.route('/menu/<menu_item_id>/reviews')
 def see_reviews(menu_item_id):
-    results = conn[DATABASE_NAME][MENU].find_one({
-        '_id': ObjectId(menu_item_id)
-    })
+    results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id) })
+
     
-    results2 = conn[DATABASE_NAME][REVIEWS].aggregate([{
-        "$match": { 'menu_item_id': ObjectId(menu_item_id) }
-    }])
-    
-    return render_template('reviews.html', item_results=results, reviews=results2)
+    return render_template('reviews.html', results=results)
 
 
 
