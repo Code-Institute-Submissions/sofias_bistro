@@ -45,34 +45,47 @@ def menu():
     desserts = conn[DATABASE_NAME][MENU].find({'item_category': 'Dessert'}).sort('item_name', pymongo.ASCENDING)  
     
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
-
-@app.route('/reviews/new')
-def add_review(menu_item_id):
     
-    rating = request.args.get('rating')
-    dish = request.args.get('menu_item')
+@app.route('/reviews/new')
+def add_review():
+    
+    # rating = request.form.get('rating')
+    # dish = request.form.get('item_name')
     
     all_ratings = ["1", "2", "3", "4", "5"]
     all_menu_items = conn[DATABASE_NAME][MENU].find()
+
+    return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items)
+
+@app.route('/reviews/new', methods=['POST'])
+def process_add_review():
+    
+    all_ratings = ["1", "2", "3", "4", "5"]
+    all_menu_items = conn[DATABASE_NAME][MENU].find()    
+    
+
+
+    # visit_date = request.form.get('visit_date')    
+    # reviewer_name = request.form.get('reviewer_name')
+    # rating = request.args.get('rating')
+    # comment = request.form.get('comment')
     
     new_review = {
-        'date': datetime.strptime('2019-01-01'),
-        'reviewer_name': 'James',
-        'rating': '5',
-        'comment': "Some reviews"
+        'menu_item_id': request.form.get('item_name'),
+        'date': request.form.get('visit_date'),
+        'reviewer_name': request.form.get('reviewer_name'),
+        'rating': request.form.get('rating'),
+        'comment': request.form.get('comment')
     }
+
+    # insert_review = conn[DATABASE_NAME][MENU].update({
+    #     "$match": {'_id': ObjectId(request.form.get('item_name'))}},
+    #     {'$push': {'reviews': new_review}})
     
-    insert_review = conn[DATABASE_NAME][MENU].update(
-        {
-            '_id': ObjectId(menu_item_id)
-        },
-        {'$push': {
-            'reviews': new_review
-        }}
-        )
+    return new_review 
+    # return render_template('index.html', new_review=new_review, insert_review=insert_review)    
+
     
-    print(new_review)
-    return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items, insert_review=insert_review)
 
 #Routing Contact Page
 @app.route('/contact')
@@ -80,23 +93,6 @@ def contact():
     
     return render_template('contact.html')
 
-    
-#Routing to process newly created review
-@app.route('/reviews/new', methods=["POST"])
-def process_added_review():
-        
-    visit_date = request.form.get('visit_date')
-    reviewer_name = request.form.get('reviewer_name')
-    dish = request.form.get('menu_item')
-    rating = request.form.get('rating')
-    comment = request.form.get('comment')
-
-    # print(visit_date, reviewer_name, dish, rating, comment)
-    #Inserting values from review form fields into Mongo database
-    conn[DATABASE_NAME][MENU].insert({
-        
-    })
-    return render_template("index.html")
 
 #Routing page of reviews for each menu item
 @app.route('/menu/<menu_item_id>/reviews')

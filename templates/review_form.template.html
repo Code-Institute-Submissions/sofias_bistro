@@ -10,12 +10,12 @@
 
 <div class="form-group">
     <label for="menu_item">Select Dish</label>
-    <select class="form-control" name="menu_item" id="menu-item">
+    <select class="form-control" name="item_name" id="menu-item">
       <option>Select Dish</option>
-      {%for m in all_menu_items %}
+      {%for m in all_menu_items%}
          
-         <option value='{{m['_id']}}'
-         {%if menu_item == m %}
+         <option  value='{{m['_id']}}'
+         {%if item_name == m %}
          selected
          {%endif%}
          
@@ -26,11 +26,11 @@
 
 <div class="form-group">
     <label for="rating">Rate the dish</label>
-    <select class="form-control" name="rating" id="rating">
+    <select class="form-control" name="rating"  id="rating">
       <option>Rate the dish</option>
-      {%for r in all_ratings %}
+      {%for r in all_ratings%}
          
-         <option
+         <option  value="{{r}}"
          {%if rating == r %}
          selected
          {%endif%}
