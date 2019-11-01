@@ -65,10 +65,6 @@ def process_add_review():
     
     menu_item_id = request.form.get('item_name')
     
-    # visit_date = request.form.get('visit_date')    
-    # reviewer_name = request.form.get('reviewer_name')
-    # rating = request.args.get('rating')
-    # comment = request.form.get('comment')
     
     new_review = {
         'date': request.form.get('visit_date'),
@@ -96,10 +92,11 @@ def contact():
 #Routing page of reviews for each menu item
 @app.route('/menu/<menu_item_id>/reviews')
 def see_reviews(menu_item_id):
-    results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id) })
 
+    results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id)})
+    results2 = conn[DATABASE_NAME][MENU].find({'_id': ObjectId(menu_item_id)},{'reviews.date':1,'reviews.reviewer_name':1, 'reviews.rating':1, 'reviews.comment':1}) 
     
-    return render_template('reviews.html', results=results)
+    return render_template('reviews.html', results=results, results2=results2)
 
 
 

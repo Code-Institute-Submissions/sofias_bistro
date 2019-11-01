@@ -14,10 +14,11 @@
      
     <h1>{{results['item_name']}}</h1>
     
+  
 
-    <h2>{{results['reviews']}}</h2>
-
-
+  {%for r in results2%}
+  <h2>{{r['reviews']}}</h2>
+  {%endfor%}
 
 
     <!-- Optional JavaScript -->
