@@ -1,4 +1,4 @@
-{%extends 'layout.template.html'%}
+ {%extends 'layout.template.html'%}
 
 {%block title%}{%endblock%}
 {%block h1%}{%endblock%}
@@ -7,7 +7,7 @@
 
 <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link disabled" href={{url_for('index')}}>Home</a>
+    <a class="nav-link" href={{url_for('index')}}>Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href={{url_for('about')}}>About</a>
@@ -19,12 +19,13 @@
     <a class="nav-link" href={{url_for('add_review')}}>Add Review</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href={{url_for('see_all_reviews')}}>See All Reviews</a>
+    <a class="nav-link" href={{url_for('contact')}}>Contact</a>
   </li>
 </ul>
-<h1 class="nav justify-content-center">THIS IS THE HOMEPAGE</h1>
-{%endblock%}
+<h1 class="nav justify-content-center">THIS IS ADD REVIEW 1</h1>
 
-{%block content%}
-
+    <form class="form b-2 m-3 pt-4" enctype="multipart/form-data" method="POST">
+        {%include "review_form.template.html"%}
+        <input type='submit' value='Edit' class='btn btn-primary' />
+    </form> 
 {%endblock%}

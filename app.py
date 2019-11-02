@@ -48,7 +48,7 @@ def menu():
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
  
  
- 
+
  
  
 @app.route('/reviews/new')
@@ -113,27 +113,24 @@ def process_add_review():
     })
     
     
-    return redirect(url_for('add_review'))
+    return redirect(url_for('see_all_reviews'))
 
-#Routing Contact Page
-@app.route('/contact')
-def contact():
-    
-    return render_template('contact.html')
+@app.route('/reviews/all', methods=["POST"])
+def see_all_reviews(): 
+    return render_template('all_reviews.html')
+
 
 
 #Routing page of reviews for each menu item
 @app.route('/menu/<menu_item_id>/reviews')
-def see_reviews(menu_item_id):
+def see_menu_reviews(menu_item_id):
 
     item_results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id)})
     reviews = conn[DATABASE_NAME][REVIEWS].aggregate([{
         "$match": { 'menu_item_id': ObjectId(menu_item_id) }
     }])
 
-    return render_template('reviews.html', item_results=item_results, reviews=reviews)
-
-
+    return render_template('menu_reviews.html', item_results=item_results, reviews=reviews)
 
 
 
