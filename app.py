@@ -145,8 +145,6 @@ def see_menu_reviews(menu_item_id):
 @app.route('/reviews/<review_id>/edit')
 def edit_review(review_id):
 
-
-    
     selected_review = conn[DATABASE_NAME][REVIEWS].find_one({
         '_id': ObjectId(review_id)
     })
@@ -182,6 +180,29 @@ def process_edit_review(review_id):
 
     return redirect(url_for('see_all_reviews'))    
 
+#Routing to confirm if user wants to delete a review
+@app.route('/reviews/<review_id>/confirm_delete')
+def confirm_delete_review(review_id):
+    
+    selected_review = conn[DATABASE_NAME][REVIEWS].find_one({
+        '_id': ObjectId(review_id)
+    })    
+    
+    return render_template('confirm_delete_review.html', selected_review=selected_review)
+
+#Routing to confirm if user wants to delete a review
+@app.route('/reviews/<review_id>/delete')
+def delete_review(review_id):
+    
+    selected_review = conn[DATABASE_NAME][REVIEWS].find_one({
+        '_id': ObjectId(review_id)
+    })    
+    
+    conn[DATABASE_NAME][REVIEWS].delete_one({
+        '_id': ObjectId(review_id)
+    })
+    
+    return redirect(url_for('see_all_reviews'))
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
