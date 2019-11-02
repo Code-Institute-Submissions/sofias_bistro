@@ -35,7 +35,9 @@
           <p class="card-text">{{each_review['comment']}}</p>
           <p class="card-text"> - {{each_review['reviewer_name']}}</p>
 
+          <a href="{{url_for('edit_review', review_id=each_review['_id'])}}" class="btn btn-primary">Edit</a>
         </div>
+        
       </div> 
     </div>
       

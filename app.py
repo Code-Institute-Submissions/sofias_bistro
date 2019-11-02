@@ -19,6 +19,10 @@ conn = pymongo.MongoClient(MONGO_URI)
 app = Flask(__name__)
 
 
+all_ratings = ["1", "2", "3", "4", "5"]
+all_menu_items = conn[DATABASE_NAME][MENU].find()  
+
+
 # Flask Routes Begin Here
 
 #Routing Index (Home) Page
@@ -61,10 +65,10 @@ def add_review():
     # rating = request.form.get('rating')
     # dish = request.form.get('item_name')
     
-    all_ratings = ["1", "2", "3", "4", "5"]
-    all_menu_items = conn[DATABASE_NAME][MENU].find()
+    # all_ratings = ["1", "2", "3", "4", "5"]
+    # all_menu_items = conn[DATABASE_NAME][MENU].find()
 
-    return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items)
+    return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items, selected_review={})
 
 
 
@@ -98,8 +102,6 @@ def add_review():
 @app.route('/reviews/new', methods=["POST"])
 def process_add_review():
 
-    all_ratings = ["1", "2", "3", "4", "5"]
-    all_menu_items = conn[DATABASE_NAME][MENU].find()    
     
     menu_item_id = request.form.get('item_name')
     date = request.form.get('visit_date')
@@ -143,14 +145,42 @@ def see_menu_reviews(menu_item_id):
 @app.route('/reviews/<review_id>/edit')
 def edit_review(review_id):
 
-    all_ratings = ["1", "2", "3", "4", "5"]
-    all_menu_items = conn[DATABASE_NAME][MENU].find()   
+
     
     selected_review = conn[DATABASE_NAME][REVIEWS].find_one({
         '_id': ObjectId(review_id)
     })
     
     return render_template('edit_review.html', selected_review=selected_review, all_ratings=all_ratings, all_menu_items=all_menu_items)
+
+#Routing to process form to make updates to edited review
+@app.route('/reviews/<review_id>/edit', methods=["POST"])
+def process_edit_review(review_id):
+
+  
+    
+    menu_item_id = request.form.get('item_name')
+    date = request.form.get('visit_date')
+    reviewer_name = request.form.get('reviewer_name')
+    # dish_tasted = request.form.get('item_name')
+    rating = request.form.get('rating')
+    comment = request.form.get('comment')
+    
+    
+    #Updating in database
+    conn[DATABASE_NAME][REVIEWS].update({
+        '_id': ObjectId(review_id)}, {
+        '$set': {
+        'menu_item_id': ObjectId(menu_item_id),
+        'date': date,
+        'reviewer_name': reviewer_name,
+        # 'item_name': dish_tasted,
+        'rating': rating,
+        'comment': comment
+        }
+    })
+
+    return redirect(url_for('see_all_reviews'))    
 
 
 # "magic code" -- boilerplate
