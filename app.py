@@ -38,7 +38,7 @@ def about():
 #Routing Menu Page
 @app.route('/menu')
 def menu():
-    """#Fetch all menu items by categories and display them in alphabetical order"""
+    """Fetch all menu items by categories and display them in alphabetical order"""
     appetisers = conn[DATABASE_NAME][MENU].find({'item_category': 'Appetiser'}).sort('item_name', pymongo.ASCENDING)
     pastas = conn[DATABASE_NAME][MENU].find({'item_category': 'Pasta'}).sort('item_name', pymongo.ASCENDING)
     pizzas = conn[DATABASE_NAME][MENU].find({'item_category': 'Pizza'}).sort('item_name', pymongo.ASCENDING)
@@ -48,7 +48,11 @@ def menu():
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
  
  
-
+@app.route('/reviews_all')
+def see_all_reviews(): 
+    """Fetch all reviews and display them according to visit date"""
+    all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
+    return render_template('all_reviews.html', all_reviews=all_reviews)
  
  
 @app.route('/reviews/new')
@@ -115,9 +119,7 @@ def process_add_review():
     
     return redirect(url_for('see_all_reviews'))
 
-@app.route('/reviews/all', methods=["POST"])
-def see_all_reviews(): 
-    return render_template('all_reviews.html')
+
 
 
 

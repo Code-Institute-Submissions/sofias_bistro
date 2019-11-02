@@ -22,7 +22,24 @@
     <a class="nav-link" href={{url_for('see_all_reviews')}}>Contact</a>
   </li>
 </ul>
-<h1 class="nav justify-content-center">THIS IS ABOUT THE RESTAURANT</h1>
+<h1 class="nav justify-content-center">SEE ALL REVIEWS</h1>
+
+    {%for each_review in all_reviews%}
+    <div class="container m-2, p-2">
+      <div class="card">
+        <div class="card-header">
+          {{each_review['date']}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Rating: {{each_review['rating']}}</h5>
+          <p class="card-text">{{each_review['comment']}}</p>
+          <p class="card-text"> - {{each_review['reviewer_name']}}</p>
+
+        </div>
+      </div> 
+    </div>
+      
+      {%endfor%}
 {%endblock%}
 
 {%block content%}
