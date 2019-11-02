@@ -18,6 +18,7 @@ conn = pymongo.MongoClient(MONGO_URI)
 
 app = Flask(__name__)
 
+
 # Flask Routes Begin Here
 
 #Routing Index (Home) Page
@@ -45,7 +46,11 @@ def menu():
     desserts = conn[DATABASE_NAME][MENU].find({'item_category': 'Dessert'}).sort('item_name', pymongo.ASCENDING)  
     
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
-    
+ 
+ 
+ 
+ 
+ 
 @app.route('/reviews/new')
 def add_review():
     
@@ -57,30 +62,58 @@ def add_review():
 
     return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items)
 
-@app.route('/reviews/new', methods=['POST'])
-def process_add_review():
+
+
+""" ORIGINAL ADD REVIEW FUNCTION PUSHES AS ARRAY IN MENU COLLECTIONS """   
+
+# @app.route('/reviews/new', methods=['POST'])
+# def process_add_review():
     
+#     all_ratings = ["1", "2", "3", "4", "5"]
+#     all_menu_items = conn[DATABASE_NAME][MENU].find()    
+    
+#     menu_item_id = request.form.get('item_name')
+    
+    
+#     new_review = {
+#         'date': request.form.get('visit_date'),
+#         'reviewer_name': request.form.get('reviewer_name'),
+#         'rating': request.form.get('rating'),
+#         'comment': request.form.get('comment')
+#     }
+
+#     insert_review = conn[DATABASE_NAME][MENU].update({
+#         '_id': ObjectId(menu_item_id)},
+#         {'$push': {'reviews': new_review}})
+    
+#     # return new_review 
+#     return render_template('index.html', new_review=new_review, insert_review=insert_review)    
+
+""" END OF ORIGINAL ADD REVIEW FUNCTION """
+
+@app.route('/reviews/new', methods=["POST"])
+def process_add_review():
+
     all_ratings = ["1", "2", "3", "4", "5"]
     all_menu_items = conn[DATABASE_NAME][MENU].find()    
     
     menu_item_id = request.form.get('item_name')
-    
-    
-    new_review = {
+    date = request.form.get('visit_date')
+    reviewer_name = request.form.get('reviewer_name')
+    rating = request.form.get('rating')
+    comment = request.form.get('comment')
+
+
+    conn[DATABASE_NAME][REVIEWS].insert({
+        'menu_item_id': ObjectId(menu_item_id),
         'date': request.form.get('visit_date'),
         'reviewer_name': request.form.get('reviewer_name'),
         'rating': request.form.get('rating'),
         'comment': request.form.get('comment')
-    }
-
-    insert_review = conn[DATABASE_NAME][MENU].update({
-        '_id': ObjectId(menu_item_id)},
-        {'$push': {'reviews': new_review}})
+    })
     
-    # return new_review 
-    return render_template('index.html', new_review=new_review, insert_review=insert_review)    
-
     
+    return redirect(url_for('add_review'))
 
 #Routing Contact Page
 @app.route('/contact')
@@ -94,8 +127,8 @@ def contact():
 def see_reviews(menu_item_id):
 
     results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id)})
-    results2 = conn[DATABASE_NAME][MENU].find({'_id': ObjectId(menu_item_id)},{'reviews.date':1,'reviews.reviewer_name':1, 'reviews.rating':1, 'reviews.comment':1}) 
-    
+    results2 = conn[DATABASE_NAME][MENU].find({'_id': ObjectId(menu_item_id)}, {'reviews.date':1})
+
     return render_template('reviews.html', results=results, results2=results2)
 
 

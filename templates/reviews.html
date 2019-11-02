@@ -15,11 +15,13 @@
     <h1>{{results['item_name']}}</h1>
     
   
-
-  {%for r in results2%}
-  <h2>{{r['reviews']}}</h2>
+  <ul>
+  {%for each_result in results2%}
+    <li name="outcome" value="{{each_result['reviews']}}">{{each_result}}</li></li>
   {%endfor%}
-
+  </ul>
+  
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
