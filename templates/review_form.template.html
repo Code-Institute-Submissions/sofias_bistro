@@ -1,24 +1,27 @@
 <div class="form-group">
     <label for="reviewer-name">Name</label>
-    <input type="text" class="form-control" id="reviewer-name" name="reviewer_name" placeholder="Enter your name">
+    <input type="text" class="form-control" id="reviewer-name" name="reviewer_name" value="{{selected_review['reviewer_name']}}" placeholder="Enter your name">
 </div>
 
 <div class="form-group">
     <label class='label' for="restaurant-name">Visit Date:</label>
-    <input type="date" class="form-control" id="visit-date" name="visit_date" placeholder="Enter visited date">
+    <input type="date" class="form-control" id="visit-date" name="visit_date" value="{{selected_review['date']}}" placeholder="Enter visited date">
 </div>
 
 <div class="form-group">
     <label for="menu_item">Select Dish</label>
-    <select class="form-control" name="item_name" id="menu-item">
-      <option>Select Dish</option>
+    <select class="form-control" name="item_name" value="{{selected_review['menu_item_id']}}" id="menu-item">
+      <option >Select Dish</option>
       {%for m in all_menu_items%}
          
-         <option  value='{{m['_id']}}'
+         <option value='{{m['_id']}}'
          {%if item_name == m %}
          selected
-         {%endif%}
          
+         {%endif%}
+         {%if selected_review['menu_item_id'] == m['_id'] %}
+         selected
+         {%endif%}
          >{{m['item_name']}}</option>
       {%endfor%}
     </select>
@@ -26,7 +29,7 @@
 
 <div class="form-group">
     <label for="rating">Rate the dish</label>
-    <select class="form-control" name="rating"  id="rating">
+    <select class="form-control" name="rating" id="rating">
       <option>Rate the dish</option>
       {%for r in all_ratings%}
          
@@ -34,12 +37,16 @@
          {%if rating == r %}
          selected
          {%endif%}
+         {%if selected_review['rating'] == r %}
+         selected
+         {%endif%}
+         
          
          >{{r}}</option>
       {%endfor%}
     </select>
 </div>
 <div class="form-group">
-    <label for="comment">Example textarea</label>
-    <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
+    <label for="comment">Share your experience</label>
+    <textarea class="form-control" id="comment" name="comment" rows="4">{{selected_review['comment']}}</textarea>
 </div>    

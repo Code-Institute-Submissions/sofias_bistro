@@ -48,7 +48,7 @@ def menu():
     return render_template('menu.html', appetisers=appetisers, pastas=pastas, pizzas=pizzas, entrees=entrees, desserts=desserts)
  
  
-@app.route('/reviews_all')
+@app.route('/reviews')
 def see_all_reviews(): 
     """Fetch all reviews and display them according to visit date"""
     all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
@@ -104,16 +104,18 @@ def process_add_review():
     menu_item_id = request.form.get('item_name')
     date = request.form.get('visit_date')
     reviewer_name = request.form.get('reviewer_name')
+    # dish_tasted = request.form.get('item_name')
     rating = request.form.get('rating')
     comment = request.form.get('comment')
 
 
     conn[DATABASE_NAME][REVIEWS].insert({
         'menu_item_id': ObjectId(menu_item_id),
-        'date': request.form.get('visit_date'),
-        'reviewer_name': request.form.get('reviewer_name'),
-        'rating': request.form.get('rating'),
-        'comment': request.form.get('comment')
+        'date': date,
+        'reviewer_name': reviewer_name,
+        # 'item_name': dish_tasted,
+        'rating': rating,
+        'comment': comment
     })
     
     
@@ -134,6 +136,21 @@ def see_menu_reviews(menu_item_id):
 
     return render_template('menu_reviews.html', item_results=item_results, reviews=reviews)
 
+
+
+
+#Routing to generate form for editing review
+@app.route('/reviews/<review_id>/edit')
+def edit_review(review_id):
+
+    all_ratings = ["1", "2", "3", "4", "5"]
+    all_menu_items = conn[DATABASE_NAME][MENU].find()   
+    
+    selected_review = conn[DATABASE_NAME][REVIEWS].find_one({
+        '_id': ObjectId(review_id)
+    })
+    
+    return render_template('edit_review.html', selected_review=selected_review, all_ratings=all_ratings, all_menu_items=all_menu_items)
 
 
 # "magic code" -- boilerplate
