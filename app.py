@@ -126,10 +126,12 @@ def contact():
 @app.route('/menu/<menu_item_id>/reviews')
 def see_reviews(menu_item_id):
 
-    results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id)})
-    results2 = conn[DATABASE_NAME][MENU].find({'_id': ObjectId(menu_item_id)}, {'reviews.date':1})
+    item_results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id)})
+    reviews = conn[DATABASE_NAME][REVIEWS].aggregate([{
+        "$match": { 'menu_item_id': ObjectId(menu_item_id) }
+    }])
 
-    return render_template('reviews.html', results=results, results2=results2)
+    return render_template('reviews.html', item_results=item_results, reviews=reviews)
 
 
 
