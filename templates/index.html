@@ -4,8 +4,6 @@
 
 {%block title%}&nbsp;- Home{%endblock%}
 
-  </head>
-  <body>
 
 
 {%block h1%}SOFIA'S BISTRO{%endblock%}
@@ -14,9 +12,14 @@
 {%block content%}
 
 
-<div class="container-fluid b-0 m-0 p-0" id="home-page" style="background-image: url(static/images/banner_bg.jpg); background-size: cover; height: 800px;">
-  <div class="container">
-    <h2 class="justify-content-center display-4 b-3 m-3 p-4" style="opacity: 0.6; color:white; position: absolute;">Home is where the heart is</h1>
-  </div>
+<div class="container-fluid b-0 m-0 p-0" id="home-page" style="background-image: url(static/images/banner_bg.jpg); background-size: cover; height: 100vh;">
+  
+      <div class="row align-items-center h-100">
+        <div class="col-6 mx-auto">
+            <div class="jumbotron" style="opacity: 0.8; color:white; text-align:center; font-family: 'Raleway', sans-serif; font-style: oblique; text-shadow: 2px 2px brown;">
+                <h1>From a family to the community</h1>
+            </div>
+        </div>
+    </div>
 </div>
 {%endblock%}

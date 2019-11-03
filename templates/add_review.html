@@ -1,16 +1,20 @@
 {%extends 'layout.template.html'%}
 
-{%block title%}{%endblock%}
-{%block h1%}{%endblock%}
+{%block title%}&nbsp;- Add Review{%endblock%}
+
 
 {%block content%}
-<h2 class="justify-content-center" style="font-family: 'Roboto', sans-serif; color: #7B6B5C; text-align: center;">Add A Review</h2>
-<div class='container mt-4 pt-4'>
 
+<div class='container bt-4 mt-4 pt-4'>
+<br><br>
+<h2 class="justify-content-center" style="font-family: 'Roboto', sans-serif; color: #7B6B5C; text-align: center;">Add Review</h2>
+<br><br>
+<p>We would love to hear from you! Share your experience on our reviews page:</p>
     <form class="form b-2 m-3 pt-4 needs-validation" enctype="multipart/form-data" method="POST">
         {%include "review_form.template.html"%}
         <input type='submit' value='Create' class='btn btn-primary' />
         <a class="btn btn-primary" href="{{url_for('see_all_reviews')}}">Cancel</a>  
     </form> 
+ 
 </div>    
 {%endblock%}

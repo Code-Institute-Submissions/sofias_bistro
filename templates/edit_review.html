@@ -4,10 +4,12 @@
 
 
 {%block content%}
+<div class='container bt-4 mt-4 pt-4'>
 <h2 class="justify-content-center" style="font-family: 'Roboto', sans-serif; color: #7B6B5C; text-align: center;">Edit Review</h2>
     <form class="form b-2 m-3 pt-4" enctype="multipart/form-data" method="POST">
         {%include "review_form.template.html"%}
         <input type='submit' value='Update' class='btn btn-primary' />
         <a class="btn btn-primary" href="{{url_for('see_all_reviews')}}">Cancel</a>         
     </form> 
+</div>
 {%endblock%}
