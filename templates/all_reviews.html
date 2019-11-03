@@ -1,32 +1,14 @@
 {%extends 'layout.template.html'%}
 
 {%block title%}{%endblock%}
-{%block h1%}{%endblock%}
+{%block h1%}ALL REVIEWS{%endblock%}
 
-{%block nav%}
+{%block content%}
 
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link " href={{url_for('index')}}>Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href={{url_for('about')}}>About</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href={{url_for('menu')}}>Menu</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href={{url_for('add_review')}}>Add Review</a>
-  </li>   
-  <li class="nav-item">
-    <a class="nav-link" href={{url_for('see_all_reviews')}}>Contact</a>
-  </li>
-</ul>
-<h1 class="nav justify-content-center">SEE ALL REVIEWS</h1>
 
     {%for each_review in all_reviews%}
-    <div class="container m-2, p-2">
-      <div class="card">
+    <div class="container bt-2 mt-4 pt-4">
+      <div class="card pt-4, mt-4">
         <div class="card-header">
           {{each_review['date']}}
         </div>
@@ -45,6 +27,4 @@
       {%endfor%}
 {%endblock%}
 
-{%block content%}
 
-{%endblock%}

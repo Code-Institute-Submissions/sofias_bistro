@@ -1,4 +1,9 @@
-<div class="form-group">
+{%extends 'layout.template.html'%}
+
+
+{%block content%}
+
+<div class="form-group mt-4 pt-4">
     <label for="reviewer-name">Name</label>
     <input type="text" class="form-control" id="reviewer-name" name="reviewer_name" value="{{selected_review['reviewer_name']}}" placeholder="Enter your name">
 </div>
@@ -50,3 +55,5 @@
     <label for="comment">Share your experience</label>
     <textarea class="form-control" id="comment" name="comment" rows="4">{{selected_review['comment']}}</textarea>
 </div>    
+
+{%endblock%}

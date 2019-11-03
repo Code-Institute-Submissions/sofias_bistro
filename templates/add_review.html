@@ -1,31 +1,15 @@
  {%extends 'layout.template.html'%}
 
 {%block title%}{%endblock%}
-{%block h1%}{%endblock%}
+{%block h1%}THIS IS ADD REVIEW{%endblock%}
 
-{%block nav%}
+{%block content%}
 
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link" href={{url_for('index')}}>Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href={{url_for('about')}}>About</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href={{url_for('menu')}}>Menu</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href={{url_for('add_review')}}>Add Review</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href={{url_for('see_all_reviews')}}>See All Reviews</a>
-  </li>
-</ul>
-<h1 class="nav justify-content-center">THIS IS ADD REVIEW 1</h1>
+<div class='container mt-4 pt-4'>
 
     <form class="form b-2 m-3 pt-4" enctype="multipart/form-data" method="POST">
         {%include "review_form.template.html"%}
         <input type='submit' value='Create' class='btn btn-primary' />
     </form> 
+</div>    
 {%endblock%}
