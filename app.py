@@ -64,12 +64,6 @@ def see_all_reviews():
  
 @app.route('/reviews/new')
 def add_review():
-    
-    # rating = request.form.get('rating')
-    # dish = request.form.get('item_name')
-    
-    # all_ratings = ["1", "2", "3", "4", "5"]
-    # all_menu_items = conn[DATABASE_NAME][MENU].find()
 
     return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items, selected_review={})
 
@@ -79,19 +73,17 @@ def add_review():
 def process_add_review():
 
     
-    menu_item_id = request.form.get('item_name')
+    # menu_item_id = request.form.get('item_name')
     date = request.form.get('visit_date')
     reviewer_name = request.form.get('reviewer_name')
-    # dish_tasted = request.form.get('item_name')
     rating = request.form.get('rating')
     comment = request.form.get('comment')
 
 
     conn[DATABASE_NAME][REVIEWS].insert({
-        'menu_item_id': ObjectId(menu_item_id),
+        # 'menu_item_id': ObjectId(menu_item_id),
         'date': date,
         'reviewer_name': reviewer_name,
-        # 'item_name': dish_tasted,
         'rating': rating,
         'comment': comment
     })
@@ -103,16 +95,16 @@ def process_add_review():
 
 
 
-#Routing page of reviews for each menu item
-@app.route('/menu/<menu_item_id>/reviews')
-def see_menu_reviews(menu_item_id):
+# #Routing page of reviews for each menu item
+# @app.route('/menu/<menu_item_id>/reviews')
+# def see_menu_reviews(menu_item_id):
 
-    item_results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id)})
-    reviews = conn[DATABASE_NAME][REVIEWS].aggregate([{
-        "$match": { 'menu_item_id': ObjectId(menu_item_id) }
-    }])
+#     item_results = conn[DATABASE_NAME][MENU].find_one({ '_id': ObjectId(menu_item_id)})
+#     reviews = conn[DATABASE_NAME][REVIEWS].aggregate([{
+#         "$match": { 'menu_item_id': ObjectId(menu_item_id) }
+#     }])
 
-    return render_template('menu_reviews.html', item_results=item_results, reviews=reviews)
+#     return render_template('menu_reviews.html', item_results=item_results, reviews=reviews)
 
 
 
@@ -133,10 +125,9 @@ def process_edit_review(review_id):
 
   
     
-    menu_item_id = request.form.get('item_name')
+    # menu_item_id = request.form.get('item_name')
     date = request.form.get('visit_date')
     reviewer_name = request.form.get('reviewer_name')
-    # dish_tasted = request.form.get('item_name')
     rating = request.form.get('rating')
     comment = request.form.get('comment')
     
@@ -145,7 +136,7 @@ def process_edit_review(review_id):
     conn[DATABASE_NAME][REVIEWS].update({
         '_id': ObjectId(review_id)}, {
         '$set': {
-        'menu_item_id': ObjectId(menu_item_id),
+        # 'menu_item_id': ObjectId(menu_item_id),
         'date': date,
         'reviewer_name': reviewer_name,
         # 'item_name': dish_tasted,

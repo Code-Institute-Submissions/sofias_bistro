@@ -22,7 +22,6 @@
   <div class="card-body">
     <h5 class="mt-0">{{each_appetiser['item_name']}}</h5>
     <p>{{each_appetiser['item_description']}}</p>
-    <a href="{{url_for('see_menu_reviews', menu_item_id=each_appetiser['_id'])}}" class="btn">Reviews</a>   
   </div>
 </div>
 {%endfor%}
@@ -45,7 +44,6 @@
   <div class="card-body">
     <h5 class="mt-0">{{each_pasta['item_name']}}</h5>
     <p>{{each_pasta['item_description']}}</p>
-    <a href="{{url_for('see_menu_reviews', menu_item_id=each_pasta['_id'])}}" class="btn">Reviews</a>      
   </div>
 </div>
 {%endfor%}
@@ -64,7 +62,6 @@
   <div class="card-body">
     <h5 class="mt-0">{{each_pizza['item_name']}}</h5>
     <p>{{each_pizza['item_description']}}</p>
-    <a href="{{url_for('see_menu_reviews', menu_item_id=each_pizza['_id'])}}" class="btn">Reviews</a>      
   </div>
 </div>
   {%endfor%}  
@@ -83,7 +80,6 @@
   <div class="card-body">
     <h5 class="mt-0">{{each_entree['item_name']}}</h5>
     <p>{{each_entree['item_description']}}</p>
-    <a href="{{url_for('see_menu_reviews', menu_item_id=each_entree['_id'])}}" class="btn">Reviews</a>      
   </div>
 </div>  
   {%endfor%}  
@@ -104,7 +100,6 @@
     <div class="card-body m-3">
       <h5 class="mt-0">{{each_dessert['item_name']}}</h5>
       <p>{{each_dessert['item_description']}}</p>
-      <a href="{{url_for('see_menu_reviews', menu_item_id=each_dessert['_id'])}}" class="btn">Reviews</a>  
     </div>
   </div>    
       {%endfor%}
