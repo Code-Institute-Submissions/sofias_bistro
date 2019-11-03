@@ -1,0 +1,30 @@
+body {
+    border:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    color: #7B6B5C;
+}
+
+.nav-link, .dropdown-item {
+    color: white;
+}
+
+nav, .dropdown-menu {
+    background-color:#E0C4A7;
+}
+
+.btn {
+    color: white;
+    background-color: #A0CA92;
+    border: none;
+}
+
+.btn:hover {
+  background-color: #C2DDB9;
+}
+
+
+
+.card {
+    text-align: center;
+}

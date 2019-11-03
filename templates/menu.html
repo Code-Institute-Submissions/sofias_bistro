@@ -6,23 +6,27 @@
 
     
     
-<!--END OF SECTION -->
+
 <div class="container mt-2 pt-2">
 
 <!--Appetisers-->
-<div class="pt-4">
+<div class="pt-4 p-3 m-3">
+<br>
+<br>
 <h2>Appetisers</h2>
 
-
-<div class="media">
+<div class="row pt-3">
 {%for each_appetiser in appetisers%}
+<div class="card col-lg-4 b-2 m-3 pb-3">
   <img src="{{each_appetiser['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="media-body">
+  <div class="card-body">
     <h5 class="mt-0">{{each_appetiser['item_name']}}</h5>
     <p>{{each_appetiser['item_description']}}</p>
+    <a href="{{url_for('see_menu_reviews', menu_item_id=each_appetiser['_id'])}}" class="btn">Reviews</a>   
   </div>
-  <a href="{{url_for('see_menu_reviews', menu_item_id=each_appetiser['_id'])}}" class="btn btn-primary">Reviews</a>   
+</div>
 {%endfor%}
+</div>
 </div>
 
 
@@ -30,73 +34,82 @@
 </div>
 
 <!--Pastas-->
-<div>
+<div class="p-3 m-3">
 <h2>Pastas</h2>
 
-
-<div class="media">
+<div class="row pt-3">
 {%for each_pasta in pastas%}
+<div class="card col-lg-4 b-2 m-3 pb-3">
+
   <img src="{{each_pasta['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="media-body">
+  <div class="card-body">
     <h5 class="mt-0">{{each_pasta['item_name']}}</h5>
     <p>{{each_pasta['item_description']}}</p>
-  <a href="{{url_for('see_menu_reviews', menu_item_id=each_pasta['_id'])}}" class="btn btn-primary">Reviews</a>      
+    <a href="{{url_for('see_menu_reviews', menu_item_id=each_pasta['_id'])}}" class="btn">Reviews</a>      
   </div>
-    {%endfor%}
 </div>
-
+{%endfor%}
+</div>
 </div>
 
 <!--Pizzas-->
-<div>
+<div class="p-3 m-3">
 <h2>Pizzas</h2>
 
 
-<div class="media">
+<div class="row pt-3">
 {%for each_pizza in pizzas%}
+<div class="card col-lg-4 b-2 m-3 pb-3">
   <img src="{{each_pizza['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="media-body">
+  <div class="card-body">
     <h5 class="mt-0">{{each_pizza['item_name']}}</h5>
     <p>{{each_pizza['item_description']}}</p>
-  <a href="{{url_for('see_menu_reviews', menu_item_id=each_pizza['_id'])}}" class="btn btn-primary">Reviews</a>      
+    <a href="{{url_for('see_menu_reviews', menu_item_id=each_pizza['_id'])}}" class="btn">Reviews</a>      
   </div>
+</div>
   {%endfor%}  
 </div>
 
 </div>
 
 <!--Entrees-->
-<div>
+<div class = "p-3 m-3">
 <h2>Entrees</h2>
 
-
-<div class="media">
+<div class="row pt-3">
 {%for each_entree in entrees%}
+<div class="card col-lg-4 b-2 m-3 pb-3">
   <img src="{{each_entree['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="media-body">
+  <div class="card-body">
     <h5 class="mt-0">{{each_entree['item_name']}}</h5>
     <p>{{each_entree['item_description']}}</p>
-  <a href="{{url_for('see_menu_reviews', menu_item_id=each_entree['_id'])}}" class="btn btn-primary">Reviews</a>      
+    <a href="{{url_for('see_menu_reviews', menu_item_id=each_entree['_id'])}}" class="btn">Reviews</a>      
   </div>
+</div>  
   {%endfor%}  
-</div>
+</div>  
+
 
 </div>
 
 <!--Desserts-->
-<div>
-<h2>Desserts</h2>
+<div class="p-3 m-3">
+  <h2>Desserts</h2>
 
 
-<div class="media">
-{%for each_dessert in desserts%}
-  <img src="{{each_dessert['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="media-body">
-    <h5 class="mt-0">{{each_dessert['item_name']}}</h5>
-    <p>{{each_dessert['item_description']}}</p>
+  <div class="row pt-3">
+  {%for each_dessert in desserts%}
+  <div class="card col-lg-3 b-2 m-3 pb-3">
+    <img src="{{each_dessert['item_image']}}" class="img-thumbnail align-self-start mr-3">
+    <div class="card-body m-3">
+      <h5 class="mt-0">{{each_dessert['item_name']}}</h5>
+      <p>{{each_dessert['item_description']}}</p>
+      <a href="{{url_for('see_menu_reviews', menu_item_id=each_dessert['_id'])}}" class="btn">Reviews</a>  
+    </div>
+  </div>    
+      {%endfor%}
   </div>
-    <a href="{{url_for('see_menu_reviews', menu_item_id=each_dessert['_id'])}}" class="btn btn-primary">Reviews</a>    
-    {%endfor%}
+
 </div>
 
 </div>

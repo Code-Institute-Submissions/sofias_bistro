@@ -35,8 +35,11 @@ def index():
 #Routing About Page
 @app.route('/about')
 def about():
+
+    """Fetch restaurant details from database to display"""
+    restaurant_details = conn[DATABASE_NAME][MENU].find() 
     
-    return render_template('about.html')
+    return render_template('about.html', restaurant_details=restaurant_details)
 
 
 #Routing Menu Page
@@ -71,33 +74,6 @@ def add_review():
     return render_template('add_review.html', all_ratings=all_ratings, all_menu_items=all_menu_items, selected_review={})
 
 
-
-""" ORIGINAL ADD REVIEW FUNCTION PUSHES AS ARRAY IN MENU COLLECTIONS """   
-
-# @app.route('/reviews/new', methods=['POST'])
-# def process_add_review():
-    
-#     all_ratings = ["1", "2", "3", "4", "5"]
-#     all_menu_items = conn[DATABASE_NAME][MENU].find()    
-    
-#     menu_item_id = request.form.get('item_name')
-    
-    
-#     new_review = {
-#         'date': request.form.get('visit_date'),
-#         'reviewer_name': request.form.get('reviewer_name'),
-#         'rating': request.form.get('rating'),
-#         'comment': request.form.get('comment')
-#     }
-
-#     insert_review = conn[DATABASE_NAME][MENU].update({
-#         '_id': ObjectId(menu_item_id)},
-#         {'$push': {'reviews': new_review}})
-    
-#     # return new_review 
-#     return render_template('index.html', new_review=new_review, insert_review=insert_review)    
-
-""" END OF ORIGINAL ADD REVIEW FUNCTION """
 
 @app.route('/reviews/new', methods=["POST"])
 def process_add_review():
