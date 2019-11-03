@@ -1,5 +1,6 @@
 {%extends 'layout.template.html'%}
 
+{%block title%}&nbsp;- Menu{%endblock%}
 {%block h1%}MENU{%endblock%}
 
 {%block content%}
@@ -7,13 +8,13 @@
     
     
 
-<div class="container mt-2 pt-2">
+<div class="container mt-2 pl-2 pt-2 justify-content-center">
 
 <!--Appetisers-->
-<div class="pt-4 p-3 m-3">
+<div class="pt-4 p-3 m-3 justify-content-center">
 <br>
 <br>
-<h2>Appetisers</h2>
+<h2 style="text-align:center;">Appetisers</h2>
 
 <div class="row pt-3">
 {%for each_appetiser in appetisers%}
@@ -33,8 +34,8 @@
 </div>
 
 <!--Pastas-->
-<div class="p-3 m-3">
-<h2>Pastas</h2>
+<div class="p-3 m-3 justify-content-center">
+<h2 style="text-align:center;">Pastas</h2>
 
 <div class="row pt-3">
 {%for each_pasta in pastas%}
@@ -51,8 +52,8 @@
 </div>
 
 <!--Pizzas-->
-<div class="p-3 m-3">
-<h2>Pizzas</h2>
+<div class="p-3 m-3 justify-content-center">
+<h2 style="text-align:center;">Pizzas</h2>
 
 
 <div class="row pt-3">
@@ -70,8 +71,8 @@
 </div>
 
 <!--Entrees-->
-<div class = "p-3 m-3">
-<h2>Entrees</h2>
+<div class = "p-3 m-3 justify-content-center">
+<h2 style="text-align:center;">Entrees</h2>
 
 <div class="row pt-3">
 {%for each_entree in entrees%}
@@ -89,8 +90,8 @@
 </div>
 
 <!--Desserts-->
-<div class="p-3 m-3">
-  <h2>Desserts</h2>
+<div class="p-3 m-3 justify-content-center">
+  <h2 style="text-align:center;">Desserts</h2>
 
 
   <div class="row pt-3">

@@ -24,6 +24,9 @@ nav, .dropdown-menu {
 }
 
 
+td {
+    text-align:left;
+}
 
 .card {
     text-align: center;

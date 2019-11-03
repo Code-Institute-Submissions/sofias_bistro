@@ -1,6 +1,6 @@
 {%extends 'layout.template.html'%}
 
-{%block title%}{%endblock%}
+{%block title%}&nbsp;- Menu{%endblock%}
 {%block h1%}{%endblock%}
      
 {%block content%}

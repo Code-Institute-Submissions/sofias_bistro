@@ -6,8 +6,10 @@
 {%block content%}
 
 
+
+    <div class="container bt-2 mt-4 pt-4 pb-4">
+      <div class="mt-4 mb-4 pt-4 pb-4 justify-content-center"><p style="font-weight:500; text-align:center;">Here are some of our visitors' reviews:</p></div>
     {%for each_review in all_reviews%}
-    <div class="container bt-2 mt-4 pt-4">
       <div class="card pt-4, mt-4">
         <div class="card-header">
           {{each_review['date']}}
@@ -22,9 +24,10 @@
         </div>
         
       </div> 
+    {%endfor%}
     </div>
       
-      {%endfor%}
+
 {%endblock%}
 
 

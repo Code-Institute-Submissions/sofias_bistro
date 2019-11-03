@@ -37,7 +37,7 @@ def index():
 def about():
 
     """Fetch restaurant details from database to display"""
-    restaurant_details = conn[DATABASE_NAME][MENU].find() 
+    restaurant_details = conn[DATABASE_NAME][RESTAURANT].find_one({}) 
     
     return render_template('about.html', restaurant_details=restaurant_details)
 
@@ -136,7 +136,7 @@ def process_edit_review(review_id):
     conn[DATABASE_NAME][REVIEWS].update({
         '_id': ObjectId(review_id)}, {
         '$set': {
-        # 'menu_item_id': ObjectId(menu_item_id),
+        # 'menu_item_id': ObjectId(me{{}}nu_item_id),
         'date': date,
         'reviewer_name': reviewer_name,
         # 'item_name': dish_tasted,

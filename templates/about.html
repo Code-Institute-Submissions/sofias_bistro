@@ -9,12 +9,38 @@
 
 
 
-{%block content%}
-<div class="container justify-content-center pt-8, mt-8">
-        <p>We are a family run bistro who love to serve our home made Italian recipes passed down for generations.</p>
 
-        <p>Our Location:</p>
- </div>       
+
+{%block content%}     
+<div class="container pt-6 mt-6 justify-content-center pt-8, mt-8 height:800px; style="align-text:center;" >
+        <br><br><br><br><br><br>
+        <p ">We love to serve our home made Italian recipes passed down for generations.</p>
+        <br>
+
+        <p">Our Location:</p>
+        <br><br>
+        <table class="table table-borderless">
+                <tbody>
+                        <tr>
+                        <td>Address:</td> <td>{{restaurant_details['address']}}</td>
+                        </tr>        
+                        <tr>
+                        <td>Business Hours:</td> <td>{{restaurant_details['business_hours']}}</td>
+                        </tr>
+                        <tr>
+                        <td>Telephone:</td> <td>{{restaurant_details['telephone']}}</td>
+                        </tr>
+                        <tr>
+                        <td>Email:</td><td>{{restaurant_details['email_address']}}</td>
+                        </tr>
+                </tbody>
+        </table>
         
+        
+        
+ </div>        
 {%endblock%}
+       
+        
+
 
