@@ -1,8 +1,10 @@
 # Sofia's Bistro
 
-One or two paragraphs providing an overview of your project.
+*One or two paragraphs providing an overview of your project.*
 
-Essentially, this part is your sales pitch.
+*Essentially, this part is your sales pitch.*
+
+Sofia's Bistro is a fictional family run business that serves selected food of family run Italian recipes. The bistro was created with the intention for serving the community in Singapore a taste of home Italian food.
  
 ## UX
  
