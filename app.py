@@ -152,6 +152,8 @@ def process_edit_review(review_id):
         }
     })
 
+    flash("Review updated")
+
     return redirect(url_for('see_all_reviews'))    
 
 #Routing to confirm if user wants to delete a review
@@ -175,6 +177,8 @@ def delete_review(review_id):
     conn[DATABASE_NAME][REVIEWS].delete_one({
         '_id': ObjectId(review_id)
     })
+
+    flash("Review has been successfully deleted")
     
     return redirect(url_for('see_all_reviews'))
 
