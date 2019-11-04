@@ -1,45 +1,49 @@
-{%extends 'layout.template.html'%}
+<!--This is a template page which contains all the fields to display in the review form -->
+<!--Page calls layout template-->
+{%extends 'layout.template.html'%} 
 
 
 {%block content%}
 
-<div class="form-group mt-4 pt-4">
-    <label for="reviewer-name">Name:</label>
-    <input type="text" class="form-control" id="reviewer-name" name="reviewer_name" value="{{selected_review['reviewer_name']}}" placeholder="Enter your name" required="true">
-</div>
+<!--Start of fields to appear in review forms when called by 'add_review.html' and 'edit_review.html' -->
 
-<div class="form-group was">
-    <label class='label' for="restaurant-name">Visit Date:</label>
-    <input type="date" class="form-control" id="visit-date" name="visit_date" value="{{selected_review['date']}}" placeholder="Enter visited date" required="true">
+    <!--Reviewer's name (Compulsory Input Field)-->
+    <div class="form-group mt-4 pt-4">
+        <label for="reviewer-name">Name:</label>
+        <input type="text" class="form-control" id="reviewer-name" name="reviewer_name" value="{{selected_review['reviewer_name']}}" placeholder="Enter your name" required="true">
+    </div>
+    
+    <!--Visit Date (Compulsory Input Field)-->
+    <div class="form-group was">
+        <label class='label' for="restaurant-name">Visit Date:</label>
+        <input type="date" class="form-control" id="visit-date" name="visit_date" value="{{selected_review['date']}}" placeholder="Enter visited date" required="true">
+    </div>
+    
+    <!--Visit Rating (Compulsory Input Field)-->
+    <div class="form-group">
+        <label for="rating">Rate your visit:</label>
+        <select class="form-control" name="rating" id="rating" required="true">
+            <option value="">Select rating</option>
+            
+            {%for r in all_ratings%}
+                <option  value="{{r}}"
+                    {%if rating == r %}
+                    selected
+                    {%endif%}
+                    
+                    {%if selected_review['rating'] == r %}
+                    selected
+                    {%endif%}
+                >{{r}}</option>
+            {%endfor%}
+        </select>
+    </div>
+    
+    <!--Comments (Optional Input Field)-->
+    <div class="form-group">
+        <label for="comment">Share your experience:</label>
+        <textarea class="form-control" id="comment" name="comment" rows="4">{{selected_review['comment']}}</textarea>
+    </div>    
 
-</div>
-
-
-
-<div class="form-group">
-    <label for="rating">Rate your visit:</label>
-    <select class="form-control" name="rating" id="rating" required="true">
-      <option value="">Select rating</option>
-      {%for r in all_ratings%}
-         
-         <option  value="{{r}}"
-         {%if rating == r %}
-         selected
-         {%endif%}
-         {%if selected_review['rating'] == r %}
-         selected
-         {%endif%}
-         
-         
-        >{{r}}</option>
-      {%endfor%}
-    </select>
-
-</div>
-
-<div class="form-group">
-    <label for="comment">Share your experience:</label>
-    <textarea class="form-control" id="comment" name="comment" rows="4">{{selected_review['comment']}}</textarea>
-</div>    
-
+<!--End form fields-->
 {%endblock%}

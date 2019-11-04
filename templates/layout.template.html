@@ -1,3 +1,5 @@
+<!-- This page serves as a template for the generic format to be rendered for displaying all the webpages that call upon it --> 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,43 +17,50 @@
     <!--CSS -->
     <link href="static/css/styles.css" type="text/css" rel="stylesheet">
     
-    <title>Sofia's Bistro {%block title%}{%endblock%}</title>
+    <title>Sofia's Bistro {%block title%}{%endblock%}</title> <!-- Each page title will display accordingly within the jinja syntax -->
+    
   </head>
+  
   <body class="b-0, m-0">
 
-      <nav class="fixed-top" id="header-top" style="background-color:#E0C4A7;">    
+    <!--Nav Menu-->
+    <nav class="fixed-top" id="header-top" style="background-color:#E0C4A7;">    
           <ul class="nav justify-content-end">
+            <!--Home Page-->
             <li class="nav-item">
               <a class="nav-link" style="color: white;" href={{url_for('index')}}>Home</a>
             </li>
+            <!--About Page-->
             <li class="nav-item">
               <a class="nav-link" style="color: white;" href={{url_for('about')}}>About</a>
             </li>
+            <!--Menu Page-->
             <li class="nav-item">
               <a class="nav-link" style="color: white;" href={{url_for('menu')}}>Menu</a>
             </li>
+            <!--Dropdown to view All Reviews and Add Review Pages-->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color: white;">Reviews</a>
               <div class="dropdown-menu" style="background-color:#E0C4A7; color:white;">
+                <!--All Reviews Page-->
                 <a class="dropdown-item" style="background-color:#E0C4A7; color:white;" href={{url_for('see_all_reviews')}}>All Reviews</a>
+                <!--Add Review Page-->
                 <a class="dropdown-item" style="background-color:#E0C4A7; color:white;" href={{url_for('add_review')}}>Add Review</a>
               </div>
             </li>  
           </ul>
-        
+          
+          <!--Section where each page's heading will appear-->
           <h1 class="nav justify-content-center pb-4" style="color:white; ">{%block h1%}{%endblock%}</h1>
       </nav>
 
+    <!--Container where each page contents will display-->
     <div class="container-fluid mt-4, pt-4">
-
-
-      
       {%block content%}{%endblock%}
-      
     </div>
 
 
-    <!-- Optional JavaScript -->
+    <!-- JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

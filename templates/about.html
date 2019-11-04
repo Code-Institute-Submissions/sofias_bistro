@@ -1,44 +1,42 @@
+<!--This is about the bistro and displays the restaurant details which are called from 'Restaurant' collection-->
+<!--Page calls layout template-->
 {%extends 'layout.template.html'%}
 
 {%block title%}&nbsp;- About{%endblock%}
+
 {%block h1%}ABOUT{%endblock%}
 
-{%block nav%}
-
-{%endblock%}
-
-
-
-
-
 {%block content%}     
-<div class="container pt-6 mt-6 justify-content-center pt-8, mt-8 height:800px; style="align-text:center;" >
-        <br><br><br><br><br><br>
-        <p ">We love to serve our home made Italian recipes passed down for generations.</p>
-        <br>
-
-        <p>Our Location:</p>
-        <br><br>
-        <table class="table table-borderless">
-                <tbody>
-                        <tr>
-                        <td>Address:</td> <td>{{restaurant_details['address']}}</td>
-                        </tr>        
-                        <tr>
-                        <td>Business Hours:</td> <td>{{restaurant_details['business_hours']}}</td>
-                        </tr>
-                        <tr>
-                        <td>Telephone:</td> <td>{{restaurant_details['telephone']}}</td>
-                        </tr>
-                        <tr>
-                        <td>Email:</td><td>{{restaurant_details['email_address']}}</td>
-                        </tr>
-                </tbody>
-        </table>
+        <div class="container pt-6 mt-6 justify-content-center pt-8, mt-8" style="align-text:center; height:800px;">
         
-        
-        
- </div>        
+                <br><br><br><br><br><br>
+                <p>We love to serve our home made Italian recipes passed down for generations.</p>
+                <br>
+                <p>Our Location:</p>
+                <br><br>
+                
+                <table class="table table-borderless">
+                        <tbody>
+                                <tr>
+                                        <td>Address:</td> 
+                                        <td>{{restaurant_details['address']}}</td>
+                                </tr>        
+                                <tr>
+                                        <td>Business Hours:</td>
+                                        <td>{{restaurant_details['business_hours']}}</td>
+                                </tr>
+                                <tr>
+                                        <td>Telephone:</td>
+                                        <td>{{restaurant_details['telephone']}}</td>
+                                </tr>
+                                <tr>
+                                        <td>Email:</td>
+                                        <td>{{restaurant_details['email_address']}}</td>
+                                </tr>
+                        </tbody>
+                </table>
+                
+        </div>        
 {%endblock%}
        
         

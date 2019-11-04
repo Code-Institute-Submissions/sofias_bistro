@@ -1,113 +1,107 @@
+<!--This page displays all the menu items from the 'Menu' collection from the database-->
+<!--Page calls layout template-->
 {%extends 'layout.template.html'%}
 
 {%block title%}&nbsp;- Menu{%endblock%}
 {%block h1%}MENU{%endblock%}
 
 {%block content%}
-
+  <div class="container mt-2 pl-2 pt-2 justify-content-center">
+  
+    <!--Appetisers-->
+    <div class="pt-4 p-3 m-3 justify-content-center">
+      <br><br>
+      <h2 style="text-align:center;">Appetisers</h2>
     
-    
-
-<div class="container mt-2 pl-2 pt-2 justify-content-center">
-
-<!--Appetisers-->
-<div class="pt-4 p-3 m-3 justify-content-center">
-<br>
-<br>
-<h2 style="text-align:center;">Appetisers</h2>
-
-<div class="row pt-3">
-{%for each_appetiser in appetisers%}
-<div class="card col-lg-4 b-2 m-3 pb-3">
-  <img src="{{each_appetiser['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="card-body">
-    <h5 class="mt-0">{{each_appetiser['item_name']}}</h5>
-    <p>{{each_appetiser['item_description']}}</p>
-  </div>
-</div>
-{%endfor%}
-</div>
-</div>
-
-
-
-</div>
-
-<!--Pastas-->
-<div class="p-3 m-3 justify-content-center">
-<h2 style="text-align:center;">Pastas</h2>
-
-<div class="row pt-3">
-{%for each_pasta in pastas%}
-<div class="card col-lg-4 b-2 m-3 pb-3">
-
-  <img src="{{each_pasta['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="card-body">
-    <h5 class="mt-0">{{each_pasta['item_name']}}</h5>
-    <p>{{each_pasta['item_description']}}</p>
-  </div>
-</div>
-{%endfor%}
-</div>
-</div>
-
-<!--Pizzas-->
-<div class="p-3 m-3 justify-content-center">
-<h2 style="text-align:center;">Pizzas</h2>
-
-
-<div class="row pt-3">
-{%for each_pizza in pizzas%}
-<div class="card col-lg-4 b-2 m-3 pb-3">
-  <img src="{{each_pizza['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="card-body">
-    <h5 class="mt-0">{{each_pizza['item_name']}}</h5>
-    <p>{{each_pizza['item_description']}}</p>
-  </div>
-</div>
-  {%endfor%}  
-</div>
-
-</div>
-
-<!--Entrees-->
-<div class = "p-3 m-3 justify-content-center">
-<h2 style="text-align:center;">Entrees</h2>
-
-<div class="row pt-3">
-{%for each_entree in entrees%}
-<div class="card col-lg-4 b-2 m-3 pb-3">
-  <img src="{{each_entree['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
-  <div class="card-body">
-    <h5 class="mt-0">{{each_entree['item_name']}}</h5>
-    <p>{{each_entree['item_description']}}</p>
-  </div>
-</div>  
-  {%endfor%}  
-</div>  
-
-
-</div>
-
-<!--Desserts-->
-<div class="p-3 m-3 justify-content-center">
-  <h2 style="text-align:center;">Desserts</h2>
-
-
-  <div class="row pt-3">
-  {%for each_dessert in desserts%}
-  <div class="card col-lg-3 b-2 m-3 pb-3">
-    <img src="{{each_dessert['item_image']}}" class="img-thumbnail align-self-start mr-3">
-    <div class="card-body m-3">
-      <h5 class="mt-0">{{each_dessert['item_name']}}</h5>
-      <p>{{each_dessert['item_description']}}</p>
+      <div class="row pt-3">
+        {%for each_appetiser in appetisers%}
+          <div class="card col-lg-4 b-2 m-3 pb-3">
+            <!--Appetiser dish image will be called from database by url link-->
+            <img src="{{each_appetiser['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+            <div class="card-body">
+              <!--Appetiser name-->
+              <h5 class="mt-0">{{each_appetiser['item_name']}}</h5> 
+              <!--Appetiser dish description-->
+              <p>{{each_appetiser['item_description']}}</p> 
+            </div>
+          </div>
+        {%endfor%}
+      </div>
     </div>
-  </div>    
-      {%endfor%}
+    
+    <!--Pastas-->
+    <div class="p-3 m-3 justify-content-center">
+      <h2 style="text-align:center;">Pastas</h2>
+      
+      <div class="row pt-3">
+        {%for each_pasta in pastas%}
+          <div class="card col-lg-4 b-2 m-3 pb-3">
+            
+          <!--Appetiser dish image will be called from database by url link-->
+          <img src="{{each_pasta['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+          <div class="card-body">
+            <!--Pasta dish name-->
+            <h5 class="mt-0">{{each_pasta['item_name']}}</h5>
+            <p>{{each_pasta['item_description']}}</p>
+          </div>
+          </div>
+        {%endfor%}
+      </div>
+    </div>
+    
+    <!--Pizzas-->
+    <div class="p-3 m-3 justify-content-center">
+      <h2 style="text-align:center;">Pizzas</h2>
+      
+      <div class="row pt-3">
+        {%for each_pizza in pizzas%}
+          <div class="card col-lg-4 b-2 m-3 pb-3">
+            <!--Pizza image will be called from database by url link-->    
+            <img src="{{each_pizza['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+            <div class="card-body">
+              <h5 class="mt-0">{{each_pizza['item_name']}}</h5> <!--Dish name-->
+              <p>{{each_pizza['item_description']}}</p> <!--Dish description-->
+            </div>
+          </div>
+        {%endfor%}  
+      </div>
+    </div>
+    
+    <!--Entrees-->
+    <div class = "p-3 m-3 justify-content-center">
+      <h2 style="text-align:center;">Entrees</h2>
+      
+      <div class="row pt-3">
+        {%for each_entree in entrees%}
+          <div class="card col-lg-4 b-2 m-3 pb-3">
+            <!--Entree image will be called from database by url link-->          
+            <img src="{{each_entree['item_image']}}" class="img-thumbnail align-self-start mr-3" alt="" style="height=10%; width=10%">
+            <div class="card-body">
+              <h5 class="mt-0">{{each_entree['item_name']}}</h5> <!--Dish name-->
+              <p>{{each_entree['item_description']}}</p> <!--Dish description-->
+            </div>
+          </div>  
+        {%endfor%}  
+      </div>  
+    </div>
+    
+    <!--Desserts-->
+    <div class="p-3 m-3 justify-content-center">
+      <h2 style="text-align:center;">Desserts</h2>
+      
+      <div class="row pt-3">
+        {%for each_dessert in desserts%}
+          <div class="card col-lg-3 b-2 m-3 pb-3">
+            <!--Dessert image will be called from database by url link-->      
+            <img src="{{each_dessert['item_image']}}" class="img-thumbnail align-self-start mr-3">
+            <div class="card-body m-3">
+              <h5 class="mt-0">{{each_dessert['item_name']}}</h5>
+              <p>{{each_dessert['item_description']}}</p>
+            </div>
+          </div>    
+        {%endfor%}
+      </div>
+    </div>
+  
   </div>
-
-</div>
-
-</div>
-
 {%endblock%}
