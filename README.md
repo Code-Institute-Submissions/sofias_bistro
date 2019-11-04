@@ -4,7 +4,7 @@
 
 *Essentially, this part is your sales pitch.*
 
-Sofia's Bistro is a fictional family run business that serves selected food of family run Italian recipes. The bistro was created with the intention for serving the community in Singapore a taste of home Italian food.
+Sofia's Bistro is a fictional small scale family owned business that serves selected food of Italian cuisine passed down in the family through generations. The bistro was created with the intention to bring awareness into the community about the restaurant. By featuring the menu served by the bistro, and providing a section for individuals who visited the restaurant, the project served its purpose to use a website as a medium to in rendering views to the community about the bistro as well as a means for the bistro owner to receive feedback in an open way. Ultimately, the website aimed to serve the 
  
 ## UX
  
