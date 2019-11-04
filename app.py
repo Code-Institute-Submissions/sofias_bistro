@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash, get_flashed_messages, jsonify
 import os
 import pymongo
 import re
@@ -17,6 +17,8 @@ conn = pymongo.MongoClient(MONGO_URI)
 
 
 app = Flask(__name__)
+
+
 
 
 all_ratings = ["1", "2", "3", "4", "5"]
@@ -57,6 +59,10 @@ def menu():
  
 @app.route('/reviews')
 def see_all_reviews(): 
+    
+    messages = get_flashed_messages()
+    print(messages)
+    
     """Fetch all reviews and display them according to visit date"""
     all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
     return render_template('all_reviews.html', all_reviews=all_reviews)
@@ -88,6 +94,7 @@ def process_add_review():
         'comment': comment
     })
     
+    flash("Your review has been created.")
     
     return redirect(url_for('see_all_reviews'))
 
@@ -173,7 +180,11 @@ def delete_review(review_id):
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
-   app.run(host=os.environ.get('IP'),
+    
+    app.secret_key = os.getenv('SECRET_KEY')
+    app.config['SESSION_TYPE'] = os.getenv('SESSION_TYPE')
+    
+    app.run(host=os.environ.get('IP'),
            port=int(os.environ.get('PORT')),
            debug=True)
            
