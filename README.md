@@ -1,4 +1,4 @@
-# Your Project's Name
+# Sofia's Bistro
 
 One or two paragraphs providing an overview of your project.
 
