@@ -61,7 +61,7 @@ def menu():
 def see_all_reviews(): 
     
     messages = get_flashed_messages()
-    print(messages)
+
     
     """Fetch all reviews and display them according to visit date"""
     all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
@@ -94,7 +94,7 @@ def process_add_review():
         'comment': comment
     })
     
-    flash("Your review has been created.")
+    flash("Review successfully created")
     
     return redirect(url_for('see_all_reviews'))
 
@@ -152,7 +152,7 @@ def process_edit_review(review_id):
         }
     })
 
-    flash("Review updated")
+    flash("Review successfully updated")
 
     return redirect(url_for('see_all_reviews'))    
 
@@ -178,7 +178,7 @@ def delete_review(review_id):
         '_id': ObjectId(review_id)
     })
 
-    flash("Review has been successfully deleted")
+    flash("Review has been deleted")
     
     return redirect(url_for('see_all_reviews'))
 

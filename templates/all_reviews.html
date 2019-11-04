@@ -16,12 +16,10 @@
       <div>
           {% with messages = get_flashed_messages() %}
               {% if messages %}
-              <div class='alert alert-success'>
-                <ul class='flashes'>
+              <div class='flashes alert alert-success'>
                    {% for message in messages %}
-                   <li>{{ message }}</li>
+                   <p style="text-align:center;">{{ message }}</p>
                    {% endfor %}
-                </ul>
                 </div>
              {% endif %}
           {% endwith %}
