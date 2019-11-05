@@ -53,23 +53,43 @@ The website navigation bar has four sections:
    
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
+- Reviews section - This section has features to allow users to add, edit or delete a review.
 - ...
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
+Features to implement in the future:
+- To have a form of authentication to control user ability to amend and delete reviews.
+- To have review ratings to be tabulated and produce data statistics to the business owner to understand the feedback from customers.
+
+
 ### Features Left to Implement
-- Another feature idea
+- To implement user login account for visitors to register and login for review sharing purposes.
+- Admin account access for the business owner to be able to provide updates on the website with regards to their bistro.
 
 ## Technologies Used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-- [JQuery](https://jquery.com)
+- [HTML](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
+- [CSS](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
+
+- [Bootstrap](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
+ 
+ - [Python](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
+
+- [MongoDB](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
+
+- [Heroku](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
 
 ## Testing
 
