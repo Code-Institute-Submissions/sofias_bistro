@@ -19,7 +19,17 @@ Sofia's Bistro is a fictional small scale family owned business that serves sele
 
 The website is meant for potential customers and existing customers to be able to know of the restaurant and what food they serve.
 
-The 
+As a website visitor, I will access the website url, which will take me to the homepage. I will be able to comprehend business nature of the website owner from the website name and the visual presentation.
+
+As a website visitor, I will click the 'About' navigation tab so as to get an understanding of the business nature of the website owner, and also access the website owner's contact details.
+
+As a website visitor, click the 'Menu' navigation tab which will show me the type of food the bistro sells. This will serve the purpose of me to make the decision if the menu is what I would like to consider if I am choosing an eating establishment to visit.
+
+As a website visitor, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me further insight to making a decision on whether to consider visitng the bistro.
+
+As a website visitor who has visited the restaurant, click the 'Review' navigation dropdown tab, and then click on the 'Add Review' so to be able to complete the review form to provide my dining experience.
+
+As a website visitor who has submitted a review and wishes to make amendments to it, click on the 'Review' navigation dropdown tab, and click on the 'Edit' button for the respective review to be amended. This will display the stored contents of the review in the format of the form. After making the necessary amendments, click on the 'Edit' button. The website site will then redirect to the 'All Reviews' page and display a notification that the review was successfully updated, which will be visible on that page.
 
 ## Features
 
