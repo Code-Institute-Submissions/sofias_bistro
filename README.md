@@ -53,8 +53,11 @@ The website navigation bar has four sections:
    
  
 ### Existing Features
-- Reviews section - This section has features to allow users to add, edit or delete a review.
-- ...
+- The main features of the project are as follows:
+
+- Menu Page - This displays the menu of items which the bistro serves. The information and pictures are rendered from the database.
+
+- Reviews section - This allows the user to review existing reviews, and also add, edit or delete a review.
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
@@ -63,7 +66,7 @@ In addition, you may also use this section to discuss plans for additional featu
 Features to implement in the future:
 - To have a form of authentication to control user ability to amend and delete reviews.
 - To have review ratings to be tabulated and produce data statistics to the business owner to understand the feedback from customers.
-
+- To have notification stated if no reviews are available for display.
 
 ### Features Left to Implement
 - To implement user login account for visitors to register and login for review sharing purposes.
@@ -99,17 +102,48 @@ Whenever it is feasible, prefer to automate your tests, and if you've done so, p
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+1. Navigation Menu:
+  1. Open the website at the Home Page.
+  2. Try to click on each of the following navigation tabs to view that they direct to the appropriate pages:
+    1. 'About' will link to the 'About' page
+    2. 'Menu' will link to the 'Menu' page
+    3. 'Reviews - All Reviews' will link to 'All Reviews' page
+    4. 'Reviews - Add Review' will link to the 'Add Review' page
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+1. Review Form - Add Review:
+    1. Go to the "Reviews - Add Review" page
+    2. Try to submit the form with the visit date field left empty and verify that a message will appear to prompt the user to fill up those required fields.
+    3. Try to submit the form with the name field left empty and verify that a message will appear to prompt the user to fill up those required fields.
+    4. Try to submit the form with the rating left unselected for any number and verify that a message will appear to prompt the user to fill up those required fields.
+    5. Try to submit the form with all inputs completed except for the comment field and verify that the review entry is successfully added upon completion of clicking the 'Add' button.
+    6. Try to submit the form with all inputs completed and verify that the review entry is successfully added upon completion of clicking the 'Add' button.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+2. Review Form - Edit Review:
+    1. Go to the "Reviews - All Reviews" page
+    2. Click the 'Edit' button for selected review to edit and verify that the page with the review form will show with all fields displaying the existing content.
+    3. Make amendments to the content with the visit date field left empty and verify that a message will appear to prompt the user to fill up the visit date field.
+    4. Make amendments to the content with the name field left empty and verify that a message will appear to prompt the user to fill up the name field.
+    5. Make amendments to the content with the rating field left unselected for a number and verify that a message will appear to prompt the user to select the rating.
+    6. Try to submit the form with all inputs amended and completed except for the comment field and verify that the review entry is successfully updated upong clicking the 'Update' button.
+    7. Try to submit the form with all inputs amended and completed and verify that the review entry is successfully updated upong clicking the 'Update' button. The page will redirect to the 'All Reviews' page and have a flash message appear stating that the review has been updated. The updated review will appear on the 'All Reviews' page.
+    8. Click the 'Cancel' button and verify that the 'All Reviews' page will be returned. 
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+3. Review Form - Delete Review:
+    1. Go to the "Reviews - All Reviews" page
+    2. Click the 'Delete' button for selected review to be deleted and verify that the page will be directed to a 'Deletion Confirmation' page that states the details of the review that is intended for deletion.
+    3. Click on the 'No' button and verify that the page will be directed to the 'All Reviews' page.
+    4. Click on the 'Yes' button and verify that the review is successfully deleted. The page will direct to the'All Reviews' page with a flash message appear stating that the review has been deleted. Deleted review will not appear on the 'All Reviews' page.
+    
+    
+Bugs Encountered: Upon deployment to heroku, the page would not display itself upon adding, editing and deleting a review. The issue was rectified by importing smtplib to the app.py file.
+
+All pages have been checked on smaller devices to ensure that they are presentably displayed as mobile responsive.
+
+**In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+**You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+**If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 
