@@ -6,7 +6,7 @@
 
 Sofia's Bistro is a fictional small scale family owned business that serves selected food of Italian cuisine passed down in the family through generations. The bistro was created with the intention to bring awareness into the community about the restaurant. By featuring the menu served by the bistro, and providing a section for individuals who visited the restaurant, the project served its purpose to use a website as a medium to in rendering views to the community about the bistro as well as a means for the bistro owner to receive feedback in an open way. Ultimately, the website aimed to serve the as a medium to the business owners to hear from their visitors/customers to receive input for future implementaion plans to expand their business.
 
-
+The project link may be found here:     https://msp-restaurant.herokuapp.com/ 
 
 ## UX
  
@@ -30,6 +30,10 @@ As a website visitor, I will click the 'Review' navigation dropdown tab, and the
 As a website visitor who has visited the restaurant, click the 'Review' navigation dropdown tab, and then click on the 'Add Review' so to be able to complete the review form to provide my dining experience.
 
 As a website visitor who has submitted a review and wishes to make amendments to it, click on the 'Review' navigation dropdown tab, and click on the 'Edit' button for the respective review to be amended. This will display the stored contents of the review in the format of the form. After making the necessary amendments, click on the 'Edit' button. The website site will then redirect to the 'All Reviews' page and display a notification that the review was successfully updated, which will be visible on that page.
+
+As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
+
+
 
 ## Features
 
