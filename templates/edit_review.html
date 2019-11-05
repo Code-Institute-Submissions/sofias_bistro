@@ -1,14 +1,21 @@
- {%extends 'layout.template.html'%}
+<!--This page displays the review form for user to edit a review-->
+<!--Page calls layout template-->
+{%extends 'layout.template.html'%}
 
 {%block title%}{%endblock%}
 
 
 {%block content%}
 <div class='container bt-4 mt-4 pt-4'>
-<h2 class="justify-content-center" style="font-family: 'Roboto', sans-serif; color: #7B6B5C; text-align: center;">Edit Review</h2>
+    <h2 class="justify-content-center" style="font-family: 'Roboto', sans-serif; color: #7B6B5C; text-align: center;">Edit Review</h2>
+    
+    <!--Form template for review form fields to be included into when called from 'review_form.template.html' -->
     <form class="form b-2 m-3 pt-4" enctype="multipart/form-data" method="POST">
+        <!--calling of form fields from the template-->
         {%include "review_form.template.html"%}
+        <!--To store review in the 'Reviews' collection-->
         <input type='submit' value='Update' class='btn btn-primary' />
+        <!--Returns to 'All Reviews' page without any input storage to 'Reviews' collection-->
         <a class="btn btn-primary" href="{{url_for('see_all_reviews')}}">Cancel</a>         
     </form> 
 </div>
