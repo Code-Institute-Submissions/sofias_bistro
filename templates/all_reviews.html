@@ -15,15 +15,11 @@
   
     <!--Messages to notify user when they successfully add, edit or delete a review will appear in this section on the page-->  
     <div>
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          <div class='flashes alert alert-success' style="text-align:center;">
-            {% for message in messages %}
-              <p>{{ message }}</p>
-            {% endfor %}
-          </div>
-        {% endif %}
-      {% endwith %}
+    {% for message in get_flashed_messages() %}
+      <div class="alert alert-danger">
+        <p class="lead">{{ message }}</p>
+      </div>
+    {% endfor %}
     </div>
     
     <!--Calling all reviews from the database-->  
