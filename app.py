@@ -65,7 +65,7 @@ def menu():
 def see_all_reviews(): 
     
     """This serves to flash messages on the 'All Reviews' Page when user successfully creates(add), edits or deletes a review."""
-    # messages = get_flashed_messages()  
+    messages = get_flashed_messages()  
 
     """Fetch all reviews and display them according to visit date"""
     all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
