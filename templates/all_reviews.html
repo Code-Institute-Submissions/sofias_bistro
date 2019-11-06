@@ -15,10 +15,10 @@
   
     <!--Messages to notify user when they successfully add, edit or delete a review will appear in this section on the page-->  
     <div>
-      {% with messages = get_flashed_messages(with_categories=True) %}
+      {% with messages = get_flashed_messages() %}
         {% if messages %}
           <div class='flashes alert alert-success'>
-            {% for category, message in messages %}
+            {% for message in messages %}
               <p style="text-align:center;">{{ message }}</p>
             {% endfor %}
           </div>
