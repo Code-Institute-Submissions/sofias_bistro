@@ -3,8 +3,6 @@ import smtplib
 import os
 import pymongo
 import re
-import sys
-import logging
 from bson.objectid import ObjectId 
 
 """ Retrieving the database environment variables """
@@ -20,11 +18,6 @@ conn = pymongo.MongoClient(MONGO_URI)
 
 app = Flask(__name__)
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
-
-app.secret_key = os.getenv('SECRET_KEY')
-app.config['SESSION_TYPE'] = os.getenv('SESSION_TYPE')
 
 
 """ Globalising lists that are used by multiple routes when generating 
@@ -72,7 +65,7 @@ def menu():
 def see_all_reviews(): 
     
     """This serves to flash messages on the 'All Reviews' Page when user successfully creates(add), edits or deletes a review."""
-    messages = get_flashed_messages()  
+    # messages = get_flashed_messages()  
 
     """Fetch all reviews and display them according to visit date"""
     all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
@@ -105,7 +98,7 @@ def process_add_review():
     })
     
     """ Message flashes upon sucessful creation of review. """
-    flash("Review successfully created")
+    # flash("Review successfully created")
     
     
     """ User is redirected to the 'All Reviews' Page after document is inserted into the collection """
@@ -189,6 +182,9 @@ def delete_review(review_id):
 
 # Flask boilerplate and calling constants for message flash
 if __name__ == '__main__':
+
+    app.secret_key = os.getenv('SECRET_KEY')
+    app.config['SESSION_TYPE'] = os.getenv('SESSION_TYPE')
     
     app.run(host=os.environ.get('IP'),
            port=int(os.environ.get('PORT')),
