@@ -98,7 +98,7 @@ def process_add_review():
     })
     
     """ Message flashes upon sucessful creation of review. """
-    flash("Review successfully created")
+    # flash("Review successfully created")
     
     
     """ User is redirected to the 'All Reviews' Page after document is inserted into the collection """
