@@ -19,7 +19,7 @@ conn = pymongo.MongoClient(MONGO_URI)
 app = Flask(__name__)
 
 app.secret_key = os.getenv('SECRET_KEY')
-app.config['SESSION_TYPE'] = os.getenv('SESSION_TYPE')
+# app.config['SESSION_TYPE'] = os.getenv('SESSION_TYPE')
 
 
 """ Globalising lists that are used by multiple routes when generating 
