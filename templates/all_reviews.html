@@ -14,17 +14,17 @@
     </div>
   
     <!--Messages to notify user when they successfully add, edit or delete a review will appear in this section on the page-->  
-    <div>
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          <div class='flashes alert alert-success' style="text-align:center;">
-            {% for message in messages %}
-              <p class="message_flash">{{ message }}</p>
-            {% endfor %}
-          </div>
-        {% endif %}
-      {% endwith %}
-    </div>
+    <!--<div>-->
+    <!--  {% with messages = get_flashed_messages() %}-->
+    <!--    {% if messages %}-->
+    <!--      <div class='flashes alert alert-success' style="text-align:center;">-->
+    <!--        {% for message in messages %}-->
+    <!--          <p class="message_flash">{{ message }}</p>-->
+    <!--        {% endfor %}-->
+    <!--      </div>-->
+    <!--    {% endif %}-->
+    <!--  {% endwith %}-->
+    <!--</div>-->
     
     <!--Calling all reviews from the database-->  
     {%for each_review in all_reviews%}
