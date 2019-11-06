@@ -141,7 +141,8 @@ def process_edit_review(review_id):
     })
 
     """ Message flashes upon sucessful update of review. """
-    flash("Review successfully updated")
+    message = "Review successfully updated"
+    flash(message)
 
     """ User is redirected to 'All Reviews' Page """
     return redirect(url_for('see_all_reviews'))    
