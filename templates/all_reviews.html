@@ -17,7 +17,7 @@
     <div>
       {% with messages = get_flashed_messages() %}
         {% if messages %}
-          <div class='flashes' style="text-align:center;">
+          <div class=flashes style="text-align:center;">
             {% for message in messages %}
               <p class='alert alert-success'>{{ message }}</p>
             {% endfor %}
