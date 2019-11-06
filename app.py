@@ -65,7 +65,8 @@ def menu():
 def see_all_reviews(): 
     
     """This serves to flash messages on the 'All Reviews' Page when user successfully creates(add), edits or deletes a review."""
-    # messages = get_flashed_messages()   
+    # messages = get_flashed_messages()  
+    # print(messages)
 
     """Fetch all reviews and display them according to visit date"""
     all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
@@ -98,8 +99,7 @@ def process_add_review():
     })
     
     """ Message flashes upon sucessful creation of review. """
-    message = "Review successfully created"
-    flash(message)
+    flash("Review successfully created")
     
     """ User is redirected to the 'All Reviews' Page after document is inserted into the collection """
     return redirect(url_for('see_all_reviews'))     
@@ -141,8 +141,7 @@ def process_edit_review(review_id):
     })
 
     """ Message flashes upon sucessful update of review. """
-    message = "Review successfully updated"
-    flash(message)
+    flash("Review successfully updated")
 
     """ User is redirected to 'All Reviews' Page """
     return redirect(url_for('see_all_reviews'))    
@@ -175,8 +174,7 @@ def delete_review(review_id):
     })
 
     """ Message notifiction of successful review deletion """
-    message = "Review has been deleted"
-    flash(message)
+    flash("Review has been deleted")
     
     """ User is redirected to 'All Reviews' page """
     return redirect(url_for('see_all_reviews'))
