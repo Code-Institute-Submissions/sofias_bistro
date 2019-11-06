@@ -3,6 +3,8 @@ import smtplib
 import os
 import pymongo
 import re
+import sys
+import logging
 from bson.objectid import ObjectId 
 
 """ Retrieving the database environment variables """
@@ -18,8 +20,11 @@ conn = pymongo.MongoClient(MONGO_URI)
 
 app = Flask(__name__)
 
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
+
 app.secret_key = os.getenv('SECRET_KEY')
-# app.config['SESSION_TYPE'] = os.getenv('SESSION_TYPE')
+app.config['SESSION_TYPE'] = os.getenv('SESSION_TYPE')
 
 
 """ Globalising lists that are used by multiple routes when generating 
