@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify #get_flashed_messages,
+from flask import Flask, render_template, request, redirect, url_for, flash, get_flashed_messages, jsonify 
 import smtplib
 import os
 import pymongo
@@ -61,11 +61,11 @@ def menu():
  
 
 """ Routing to display the 'All Reviews' Page. All reviews are stored in documents in the 'REVIEWS' collection. """
-@app.route('/reviews')
+@app.route('/reviews', methods=['GET'])
 def see_all_reviews(): 
     
     """This serves to flash messages on the 'All Reviews' Page when user successfully creates(add), edits or deletes a review."""
-    # messages = get_flashed_messages()  
+    messages = get_flashed_messages()  
     # print(messages)
 
     """Fetch all reviews and display them according to visit date"""
