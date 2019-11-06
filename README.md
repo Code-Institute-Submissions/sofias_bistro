@@ -204,37 +204,31 @@ https://stackoverflow.com/questions/42252443/vertical-align-center-in-bootstrap-
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ### Media
-- The photos used in this site were obtained from ...
+- The photos used in this site were obtained from [Pexels.](https://www.pexels.com/)
 
-3. Pictures from Pexels:
-
+Home Page: 
 https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
+
+Menu Page:
 https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
 https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
 https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
 https://www.pexels.com/photo/cooked-food-on-black-bowl-688804/
 https://www.pexels.com/photo/seashell-dish-921374/
-https://www.pexels.com/photo/pizza-slice-842519/
+https://www.pexels.com/photo/pizza-with-red-pepper-and-cheese-1049620/
 https://www.pexels.com/photo/pizza-on-brown-wooden-board-825661/
 https://www.pexels.com/photo/close-up-of-meal-served-in-plate-323682/
-
-(desserts):
+https://www.pexels.com/photo/brown-fish-fillet-on-white-ceramic-plate-46239/
 https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
-https://www.pexels.com/photo/food-restaurant-summer-nuts-2424/
+https://www.pexels.com/photo/cake-chocolate-chocolate-cake-cocoa-373066/
 
-(beverages):
-https://www.pexels.com/photo/background-blur-bread-breakfast-364109/
-https://www.pexels.com/photo/shallow-focus-photography-of-cafe-late-982612/
-https://www.pexels.com/photo/clear-glass-bottle-filled-with-broccoli-shake-1346347/
-https://www.pexels.com/photo/shake-in-a-glass-990439/
-https://www.pexels.com/photo/art-beverage-blur-caffeine-302896/
-https://www.pexels.com/photo/clear-highball-glass-with-iced-tea-1484678/
+All written content on all the webpages are self created. The menu names were generated from research via [Google](https://www.google.com/). The contact details on the [About](https://msp-restaurant.herokuapp.com/about) page is fictional.
+
 
 ### Acknowledgements
 
-- I received inspiration for this project from 
+I received inspiration for this project from the following:
+[Buon Appetito Italian Restaurant & Delicatessens] https://buonappetitoitalian.com/menus/lunch-menu
+[Zomato] https://www.zomato.com/
 
-2. Restaurant to get Menu ideas:
-https://buonappetitoitalian.com/menus/lunch-menu
-
-https://www.zomato.com/
+**All content used and deployed for this project is purely for educational purposes.
