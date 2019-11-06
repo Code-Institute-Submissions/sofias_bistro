@@ -4,7 +4,7 @@
 
 **Essentially, this part is your sales pitch.*
 
-Sofia's Bistro is a fictional small scale family owned business that serves selected food of Italian cuisine passed down in the family through generations. The bistro was created with the intention to bring awareness into the community about the restaurant. By featuring the menu served by the bistro, and providing a section for individuals who visited the restaurant, the project served its purpose to use a website as a medium to in rendering views to the community about the bistro as well as a means for the bistro owner to receive feedback in an open way. Ultimately, the website aimed to serve the as a medium to the business owners to hear from their visitors/customers to receive input for future implementaion plans to expand their business.
+Sofia's Bistro is a fictional bistro. The ideology behind the bistro's existence is that it is a small business owned by a (fictional) family, who are running the business with just one outlet. They have set up the establishment to serve a selection of Italian dishes for which the recipes have been passed down within the family through generations. The family operates the bistro in Singapore with the hopes to create awareness to the community via an online medium: a website called "Sofia's Bistro". Eventually the business owners are hoping to develop a niche in the community of Singapore by by featuring the homestyle Italian food. Being family oriented, they would like open a connection with their past and existing customers to give them a voice on to share with the community of Singapore about their dining experience at the bistro. Moreover, the website will open an opportunity to allow any website visitors to become potential customers for the restaurant, and ultimately for the business owners to understand what is popular amongst their customers for future business growth of the bistro.
 
 The project link may be found here:     https://msp-restaurant.herokuapp.com/ 
 
@@ -33,7 +33,7 @@ As a website visitor who has submitted a review and wishes to make amendments to
 
 As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
 
-
+Essentially, the project has developed a section where and providing a section for individuals who visited the restaurant, the project served its purpose to use a website as a medium to in rendering views to the community about the bistro as well as a means for the bistro owner to receive feedback in an open way. Ultimately, the website aimed to serve the as a medium to the business owners to hear from their visitors/customers to receive input for future implementaion plans to expand their business.
 
 ## Features
 
@@ -162,12 +162,116 @@ The coding and documentation may be found on GitHub.
 
 ## Credits
 
+1. getting a boostrap template to make the website
+
+https://bootstrapmade.com/
+
+
+
+
+3. Pictures from Pexels:
+
+https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
+https://www.pexels.com/photo/close-up-of-menu-313700/
+
+Menu items:
+(appetisers):
+https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
+https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
+https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
+https://www.pexels.com/photo/spinach-chicken-pomegranate-salad-5938/
+
+(pastas):
+https://www.pexels.com/photo/pasta-dish-with-rice-on-white-ceramic-plate-8489/
+https://www.pexels.com/photo/blur-close-up-cutlery-delicious-590477/
+https://www.pexels.com/photo/seashell-dish-921374/
+
+(pizzas):
+https://www.pexels.com/photo/pizza-slice-842519/
+https://www.pexels.com/photo/pizza-on-brown-wooden-board-825661/
+
+(entrees):
+https://www.pexels.com/photo/beef-cuisine-delicious-dinner-299347/
+https://www.pexels.com/photo/selective-focus-photography-of-beef-steak-with-sauce-675951/
+https://www.pexels.com/photo/seafood-dish-with-french-fries-in-white-ceramic-plate-7782/
+https://www.pexels.com/photo/close-up-of-meal-served-in-plate-323682/
+
+(desserts):
+https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
+https://www.pexels.com/photo/food-restaurant-summer-nuts-2424/
+
+(beverages):
+https://www.pexels.com/photo/background-blur-bread-breakfast-364109/
+https://www.pexels.com/photo/shallow-focus-photography-of-cafe-late-982612/
+https://www.pexels.com/photo/clear-glass-bottle-filled-with-broccoli-shake-1346347/
+https://www.pexels.com/photo/shake-in-a-glass-990439/
+https://www.pexels.com/photo/art-beverage-blur-caffeine-302896/
+https://www.pexels.com/photo/clear-highball-glass-with-iced-tea-1484678/
+
+
+4. Mongo Documentation
+https://docs.mongodb.com/manual/reference/operator/query/eq/
+
+5. Pymongo documentation
+https://api.mongodb.com/python/current/examples/aggregation.html
+
+6. Bootstrap template
+https://colorlib.com/wp/template/feliciano/
+
+7. Jumbotron positioning on home page
+https://stackoverflow.com/questions/42252443/vertical-align-center-in-bootstrap-4
+
+
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ### Media
 - The photos used in this site were obtained from ...
 
+3. Pictures from Pexels:
+
+https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
+https://www.pexels.com/photo/close-up-of-menu-313700/
+
+Menu items:
+(appetisers):
+https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
+https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
+https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
+https://www.pexels.com/photo/spinach-chicken-pomegranate-salad-5938/
+
+(pastas):
+https://www.pexels.com/photo/pasta-dish-with-rice-on-white-ceramic-plate-8489/
+https://www.pexels.com/photo/blur-close-up-cutlery-delicious-590477/
+https://www.pexels.com/photo/seashell-dish-921374/
+
+(pizzas):
+https://www.pexels.com/photo/pizza-slice-842519/
+https://www.pexels.com/photo/pizza-on-brown-wooden-board-825661/
+
+(entrees):
+https://www.pexels.com/photo/beef-cuisine-delicious-dinner-299347/
+https://www.pexels.com/photo/selective-focus-photography-of-beef-steak-with-sauce-675951/
+https://www.pexels.com/photo/seafood-dish-with-french-fries-in-white-ceramic-plate-7782/
+https://www.pexels.com/photo/close-up-of-meal-served-in-plate-323682/
+
+(desserts):
+https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
+https://www.pexels.com/photo/food-restaurant-summer-nuts-2424/
+
+(beverages):
+https://www.pexels.com/photo/background-blur-bread-breakfast-364109/
+https://www.pexels.com/photo/shallow-focus-photography-of-cafe-late-982612/
+https://www.pexels.com/photo/clear-glass-bottle-filled-with-broccoli-shake-1346347/
+https://www.pexels.com/photo/shake-in-a-glass-990439/
+https://www.pexels.com/photo/art-beverage-blur-caffeine-302896/
+https://www.pexels.com/photo/clear-highball-glass-with-iced-tea-1484678/
+
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from 
+
+2. Restaurant to get Menu ideas:
+https://buonappetitoitalian.com/menus/lunch-menu
+
+https://www.zomato.com/
