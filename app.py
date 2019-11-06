@@ -98,7 +98,8 @@ def process_add_review():
     })
     
     """ Message flashes upon sucessful creation of review. """
-    # flash("Review successfully created")
+    message = "Review successfully created"
+    flash(message)
     
     """ User is redirected to the 'All Reviews' Page after document is inserted into the collection """
     return redirect(url_for('see_all_reviews'))     
@@ -140,7 +141,8 @@ def process_edit_review(review_id):
     })
 
     """ Message flashes upon sucessful update of review. """
-    # flash("Review successfully updated")
+    message = "Review successfully updated"
+    flash(message)
 
     """ User is redirected to 'All Reviews' Page """
     return redirect(url_for('see_all_reviews'))    
@@ -173,7 +175,8 @@ def delete_review(review_id):
     })
 
     """ Message notifiction of successful review deletion """
-    # flash("Review has been deleted")
+    message = "Review has been deleted"
+    flash(message)
     
     """ User is redirected to 'All Reviews' page """
     return redirect(url_for('see_all_reviews'))
