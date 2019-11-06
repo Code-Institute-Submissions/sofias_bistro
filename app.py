@@ -26,6 +26,7 @@ editing and deleting a review """
 all_ratings = ["1", "2", "3", "4", "5"]
 all_menu_items = conn[DATABASE_NAME][MENU].find()  
 
+all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
 
 """ Flask Routes Begin Here """
 
@@ -68,7 +69,7 @@ def see_all_reviews():
     messages = get_flashed_messages()  
 
     """Fetch all reviews and display them according to visit date"""
-    all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
+    # all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
     return render_template('all_reviews.html', all_reviews=all_reviews)
     
     
@@ -99,10 +100,11 @@ def process_add_review():
     
     """ Message flashes upon sucessful creation of review. """
     flash("Review successfully created")
-    # messages = get_flashed_messages("Review successfully created") 
+    
     
     """ User is redirected to the 'All Reviews' Page after document is inserted into the collection """
-    return redirect(url_for('see_all_reviews'))     
+    # return redirect(url_for('see_all_reviews'))
+    return render_template('all_reviews.html', all_reviews=all_reviews)
 
 
 """ Routing to generate form for user to edit review. 
