@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, get_flashed_messages, jsonify
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify #get_flashed_messages,
 import smtplib
 import os
 import pymongo
@@ -99,8 +99,7 @@ def process_add_review():
     })
     
     """ Message flashes upon sucessful creation of review. """
-    message = "Review successfully created"
-    flash(message)
+    flash("Review successfully created")
     
     """ User is redirected to the 'All Reviews' Page after document is inserted into the collection """
     return redirect(url_for('see_all_reviews'))     
@@ -142,8 +141,7 @@ def process_edit_review(review_id):
     })
 
     """ Message flashes upon sucessful update of review. """
-    message = "Review successfully updated"
-    flash(message)
+    flash("Review successfully updated")
 
     """ User is redirected to 'All Reviews' Page """
     return redirect(url_for('see_all_reviews'))    
