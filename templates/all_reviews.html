@@ -1,5 +1,7 @@
 <!--This page displays all created reviews, which are stored in 'Reviews' Collection-->
 <!--Page calls layout template-->
+
+
 {%extends 'layout.template.html'%}
 
 {%block title%}&nbsp;- Reviews{%endblock%}
@@ -50,4 +52,12 @@
 
 {%endblock%}
 
-
+<script>
+  $(function() {
+// setTimeout() function will be fired after page is loaded
+// it will wait for 5 sec. and then will fire
+// $(".message_flash").hide() function
+  setTimeout(function() {
+      $(".message_flash").hide('blind', {}, 500)}, 5000);
+}) 
+</script>
