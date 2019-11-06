@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, get_flashed_messages, jsonify 
+from flask import Flask, render_template, request, redirect, url_for, flash,  jsonify #get_flashed_messages,
 import smtplib
 import os
 import pymongo
