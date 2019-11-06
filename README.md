@@ -6,7 +6,8 @@
 
 Sofia's Bistro is a fictional bistro. The ideology behind the bistro's existence is that it is a small business owned by a (fictional) family, who are running the business with just one outlet. They have set up the establishment to serve a selection of Italian dishes for which the recipes have been passed down within the family through generations. The family operates the bistro in Singapore with the hopes to create awareness to the community via an online medium: a website called "Sofia's Bistro". Eventually the business owners are hoping to develop a niche in the community of Singapore by by featuring the homestyle Italian food. Being family oriented, they would like open a connection with their past and existing customers to give them a voice on to share with the community of Singapore about their dining experience at the bistro. Moreover, the website will open an opportunity to allow any website visitors to become potential customers for the restaurant, and ultimately for the business owners to understand what is popular amongst their customers for future business growth of the bistro.
 
-The project link may be found here:     https://msp-restaurant.herokuapp.com/ 
+The link to the project may be found here: [Sofia's Bistro.](https://msp-restaurant.herokuapp.com/ "Sofia's Bistro")
+
 
 ## UX
  
