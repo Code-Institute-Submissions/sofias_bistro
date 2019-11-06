@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash,  jsonify #get_flashed_messages,
+from flask import Flask, render_template, request, redirect, url_for, flash, get_flashed_messages, jsonify 
 import smtplib
 import os
 import pymongo
@@ -65,7 +65,7 @@ def menu():
 def see_all_reviews(): 
     
     """This serves to flash messages on the 'All Reviews' Page when user successfully creates(add), edits or deletes a review."""
-    # messages = get_flashed_messages()  
+    messages = get_flashed_messages()  
 
     """Fetch all reviews and display them according to visit date"""
     all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
@@ -99,6 +99,7 @@ def process_add_review():
     
     """ Message flashes upon sucessful creation of review. """
     flash("Review successfully created")
+    # messages = get_flashed_messages("Review successfully created") 
     
     """ User is redirected to the 'All Reviews' Page after document is inserted into the collection """
     return redirect(url_for('see_all_reviews'))     
