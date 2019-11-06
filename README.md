@@ -104,7 +104,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Heroku](https://heroku.com/)
     - The project uses **Heroku** to deploy the website.
 
-- [W3 Schools] (https://www.w3schools.com/)
+- [W3 Schools](https://www.w3schools.com/)
     - The project uses **W3 Schools** resources to create the HTML, CSS and Bootstrap features implemented.
 
 - [Python](https://www.python.org/)
@@ -228,7 +228,7 @@ All written content on all the webpages are self created. The menu names were ge
 ### Acknowledgements
 
 I received inspiration for this project from the following:
-[Buon Appetito Italian Restaurant & Delicatessens] https://buonappetitoitalian.com/menus/lunch-menu
-[Zomato] https://www.zomato.com/
+[Buon Appetito Italian Restaurant & Delicatessens](https://buonappetitoitalian.com/menus/lunch-menu)
+[Zomato](https://www.zomato.com/)
 
 **All content used and deployed for this project is purely for educational purposes.
