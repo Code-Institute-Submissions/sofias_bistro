@@ -16,14 +16,17 @@ A copy of the project wireframe may be found [here.](https://github.com/amcali/s
 
 The website is for essentially for three types of target audiences:
 
-i) Customers - For any individuals who had and regularly visit the bistro, the website's contents and UX intends to provide an feature to allow customers to share their dining experience.
+#### i) Customers - 
+For any individuals who had and regularly visit the bistro, the website's contents and UX intends to provide an feature to allow customers to share their dining experience.
 
-ii) Website Visitors - this defines any individuals who visit the website, and do not know about the bistro.
+#### ii) Website Visitors - 
+This defines any individuals who visit the website, and do not know about the bistro.
 
-iii) Business Owners - The owners of the bistro would be able to view the reviews from its customers and use the website to display what its business has to offer.
+#### iii) Business Owners - 
+The owners of the bistro would be able to view the reviews from its customers and use the website to display what its business has to offer.
+
 
 The following scenarios illustrate how the website's existing features to serves its target audiences.
-
 
 
 #### 1) Customers
@@ -35,7 +38,6 @@ As a website visitor who has submitted a review and wishes to make amendments to
 As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
 
 
-
 #### 2) Website Visitors
 
 As a website visitor, I will access the website url, which will take me to the homepage. I will be able to comprehend business nature of the website owner from the website name and the visual presentation.
@@ -45,7 +47,6 @@ As a website visitor, I will click the 'About' navigation tab so as to get an un
 As a website visitor, click the 'Menu' navigation tab which will show me the type of food the bistro sells. This will serve the purpose of me to make the decision if the menu is what I would like to consider if I am choosing an eating establishment to visit.
 
 As a website visitor, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me further insight to making a decision on whether to consider visitng the bistro.
-
 
 
 #### 3) Business Owners
