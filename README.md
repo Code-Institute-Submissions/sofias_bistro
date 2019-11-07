@@ -6,18 +6,23 @@ Sofia's Bistro is a fictional bistro. The ideology behind the bistro's existence
 The link to the project may be found [here.](https://msp-restaurant.herokuapp.com/ "Sofia's Bistro")
 
 
+
 ## UX
 
 
 A copy of the project wireframe may be found [here.](https:// "Sofia's Bistro - Wireframe")
 The website is for essentially for three types of target audiences:
-(i) Customers - For any individuals who had and regularly visit the bistro, the website's contents and UX intends to provide an feature to allow customers to share their dining experience.
-(ii) Website Visitors - this defines any individuals who visit the website, and do not know about the bistro.
-(iii) Business Owners - The owners of the bistro would be able to view the reviews from its customers and use the website to display what its business has to offer.
+
+i) Customers - For any individuals who had and regularly visit the bistro, the website's contents and UX intends to provide an feature to allow customers to share their dining experience.
+
+ii) Website Visitors - this defines any individuals who visit the website, and do not know about the bistro.
+
+iii) Business Owners - The owners of the bistro would be able to view the reviews from its customers and use the website to display what its business has to offer.
 
 The following scenarios illustrate how the website's existing features to serves its target audiences.
 
-### Customers ###
+
+### 1) Customers
 
 As a user who has visited the restaurant, click the 'Review' navigation dropdown tab, and then click on the 'Add Review' so to be able to complete the review form to provide my dining experience.
 
@@ -25,7 +30,8 @@ As a website visitor who has submitted a review and wishes to make amendments to
 
 As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
 
-### Website Visitors ###
+
+### 2) Website Visitors
 
 As a website visitor, I will access the website url, which will take me to the homepage. I will be able to comprehend business nature of the website owner from the website name and the visual presentation.
 
@@ -35,9 +41,11 @@ As a website visitor, click the 'Menu' navigation tab which will show me the typ
 
 As a website visitor, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me further insight to making a decision on whether to consider visitng the bistro.
 
-### Business Owners ###
+
+### 3) Business Owners
 
 As the website's business owner, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me insight from customers' inputs to factor in ideas for future implementaion plans to expand the business.
+
 
 
 ## Features
@@ -45,38 +53,45 @@ As the website's business owner, I will click the 'Review' navigation dropdown t
 
 The website has four sections which are accessble via the navigation menu:
 
-1. Home - This is the first page displayed to the site visitor, it gives a visual image of the bistro.
+__1. Home__ - This is the first page displayed to the site visitor, it gives a visual image of the bistro.
 
-2. About - This is where the site visitor is able to retrieve information about the bistro's contact details and location.
+__2. About__ - This is where the site visitor is able to retrieve information about the bistro's contact details and location.
 
-3. Menu - This features the menu which the bistro serves.
+__3. Menu__ - This features the menu which the bistro serves.
 
-4. Reviews - This tab leads to two sections: 
-   (i) All Reviews - This is where the site visitor is able to view all reviews posted by customers. Each posted review provides the user the option to amend or delete the posted review.
-   (ii) Add Review - This opens to a form whereby the site visitor is able to provide their review and rate their visit to the bistro.
-   
+__4. Reviews__ - This tab leads to two sections: 
+
+   __i) All Reviews__ - This is where the site visitor is able to view all reviews posted by customers. Each posted review provides the user the option to amend or delete the posted review.
+
+   __ii) Add Review__ - This opens to a form whereby the site visitor is able to provide their review and rate their visit to the bistro.
+
+
  
 ### Existing Features
-- The main features of the project are as follows:
 
-- Menu Page and Contact Page - This displays the menu of items which the bistro serves, and the bistro location respectively. The information and pictures are rendered from a database.
+The main features of the project are as follows:
 
-- Reviews section - This allows the user to review existing reviews, and also add, edit or delete a review. All reviews stored, recalled, updated and deleted are done so via the website, and stored in a database.
+__Menu Page and Contact Page__ - This displays the menu of items which the bistro serves, and the bistro location respectively. The information and pictures are rendered from a database.
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+__Reviews section__ - This allows the user to review existing reviews, and also add, edit or delete a review. All reviews stored, recalled, updated and deleted are done so via the website, and stored in a database.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-Features to implement in the future:
+The features that are considered for future implementation are as follows:
 - To have a form of authentication to control user ability to amend and delete reviews.
 - To have review ratings to be tabulated and produce data statistics to the business owner to understand the feedback from customers.
 - To have notification stated if no reviews are available for display.
 
+
+
 ### Features Left to Implement
+
 - To implement user login account for visitors to register and login for review sharing purposes. This in turn will control the accessibility of each user to amend and delete the review(s) which they created.
+- To have notification messages to appear when the user successfully adds, edits or delete
 - Admin account access for the business owner to be able to provide updates on the website with regards to their bistro. Such updates would be any menu changes, or promotional features.
 
+
+
 ## Technologies Used
+
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
@@ -110,7 +125,10 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Python](https://www.python.org/)
     - The project uses **Python** website resources to develop the coding used.
 
+
+
 ## Testing
+
 
 For this project, manual testing was done as follows:
 
@@ -137,20 +155,20 @@ For this project, manual testing was done as follows:
     iv) Make amendments to the content with the name field left empty and verify that a message will appear to prompt the user to fill up the name field.
     v) Make amendments to the content with the rating field left unselected for a number and verify that a message will appear to prompt the user to select the rating.
     vi) Try to submit the form with all inputs amended and completed except for the comment field and verify that the review entry is successfully updated upong clicking the 'Update' button.
-    vii) Try to submit the form with all inputs amended and completed and verify that the review entry is successfully updated upong clicking the 'Update' button. The page will redirect to the 'All Reviews' page and have a flash message appear stating that the review has been updated. The updated review will appear on the 'All Reviews' page.
+    vii) Try to submit the form with all inputs amended and completed and verify that the review entry is successfully updated upong clicking the 'Update' button. The page will redirect to the 'All Reviews' page, and the updated review will appear on the 'All Reviews' page.
     viii) Click the 'Cancel' button and verify that the 'All Reviews' page will be returned. 
 
 4. Review Form - Delete Review:
     i) Go to the "Reviews - All Reviews" page
     ii) Click the 'Delete' button for selected review to be deleted and verify that the page will be directed to a 'Deletion Confirmation' page that states the details of the review that is intended for deletion.
     iii) Click on the 'No' button and verify that the page will be directed to the 'All Reviews' page.
-    iv) Click on the 'Yes' button and verify that the review is successfully deleted. The page will direct to the'All Reviews' page with a flash message appear stating that the review has been deleted. Deleted review will not appear on the 'All Reviews' page.
+    iv) Click on the 'Yes' button and verify that the review is successfully deleted. The page will direct to the'All Reviews' page, and the deleted review will not appear on the 'All Reviews' page.
     
 5. Mobile Responsive:
 All pages have been checked on smaller devices to ensure that they are presentably displayed as mobile responsive.
 
 6. Bugs Encountered: 
-Upon deployment to heroku, the page would not display itself upon adding, editing and deleting a review. The issue was rectified by importing smtplib to the app.py file.
+Upon deployment to heroku, the page would not display itself upon adding, editing and deleting a review due to an "Internal Server Error 500" issue. The issue was rectified by removing the Flask Flash Message function initially implemented for notification messages, but which only worked during testing on Cloud9.
 
 
 ## Deployment
