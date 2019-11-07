@@ -10,7 +10,7 @@ The link to the project may be found [here.](https://msp-restaurant.herokuapp.co
 ## UX
 
 
-A copy of the project wireframe may be found [here.](https:// "Sofia's Bistro - Wireframe")
+A copy of the project wireframe may be found [here.](https://github.com/amcali/sofias_bistro/issues/2/ "Sofia's Bistro - Project Wireframe")
 The website is for essentially for three types of target audiences:
 
 i) Customers - For any individuals who had and regularly visit the bistro, the website's contents and UX intends to provide an feature to allow customers to share their dining experience.
