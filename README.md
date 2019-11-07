@@ -5,12 +5,15 @@ Sofia's Bistro is a fictional bistro. The ideology behind the bistro's existence
 
 The link to the project may be found [here.](https://msp-restaurant.herokuapp.com/ "Sofia's Bistro")
 
+
 ---
+
 
 ## UX
 
 
 A copy of the project wireframe may be found [here.](https://github.com/amcali/sofias_bistro/issues/2/ "Sofia's Bistro - Project Wireframe")
+
 The website is for essentially for three types of target audiences:
 
 i) Customers - For any individuals who had and regularly visit the bistro, the website's contents and UX intends to provide an feature to allow customers to share their dining experience.
@@ -49,7 +52,9 @@ As a website visitor, I will click the 'Review' navigation dropdown tab, and the
 
 As the website's business owner, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me insight from customers' inputs to factor in ideas for future implementaion plans to expand the business.
 
+
 ---
+
 
 ## Features
 
@@ -64,9 +69,9 @@ __3. Menu__ - This features the menu which the bistro serves.
 
 __4. Reviews__ - This tab leads to two sections: 
 
-   __i) All Reviews__ - This is where the site visitor is able to view all reviews posted by customers. Each posted review provides the user the option to amend or delete the posted review.
+  __i) All Reviews__ - This is where the site visitor is able to view all reviews posted by customers. Each posted review provides the user the option to amend or delete the posted review.
 
-   __ii) Add Review__ - This opens to a form whereby the site visitor is able to provide their review and rate their visit to the bistro.
+  __i) Add Review__ - This opens to a form whereby the site visitor is able to provide their review and rate their visit to the bistro.
 
 
  
@@ -91,7 +96,9 @@ The features that are considered for future implementation are as follows:
 - To have notification messages to appear when the user successfully adds, edits or delete
 - Admin account access for the business owner to be able to provide updates on the website with regards to their bistro. Such updates would be any menu changes, or promotional features.
 
+
 ---
+
 
 ## Technologies Used
 
@@ -128,52 +135,88 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Python](https://www.python.org/)
     - The project uses **Python** website resources to develop the coding used.
 
+
 ---
+
 
 ## Testing
 
 
 For this project, manual testing was done as follows:
 
-1. Navigation Menu:
-  1. Open the website at the Home Page.
-  2. Try to click on each of the following navigation tabs to view that they direct to the appropriate pages:
-    i) 'About' will link to the 'About' page
-    ii) 'Menu' will link to the 'Menu' page
-    iii) 'Reviews - All Reviews' will link to 'All Reviews' page
-    iv) 'Reviews - Add Review' will link to the 'Add Review' page
 
-2. Review Form - Add Review:
-    i) Go to the "Reviews - Add Review" page
+#### 1. Navigation Menu:
+
+  i) Open the website at the Home Page.
+  
+  ii) Try to click on each of the following navigation tabs to view that they direct to the appropriate pages:
+  
+   a) 'About' will link to the 'About' page
+    
+   b) 'Menu' will link to the 'Menu' page
+    
+   c) 'Reviews - All Reviews' will link to 'All Reviews' page
+    
+   d) 'Reviews - Add Review' will link to the 'Add Review' page
+
+
+#### 2. Review Form - Add Review:
+
+    i) Go to the "Reviews - Add Review" page.
+    
     ii) Try to submit the form with the visit date field left empty and verify that a message will appear to prompt the user to fill up those required fields.
+    
     iii) Try to submit the form with the name field left empty and verify that a message will appear to prompt the user to fill up those required fields.
+    
     iv) Try to submit the form with the rating left unselected for any number and verify that a message will appear to prompt the user to fill up those required fields.
+    
     v) Try to submit the form with all inputs completed except for the comment field and verify that the review entry is successfully added upon completion of clicking the 'Add' button.
+    
     vi) Try to submit the form with all inputs completed and verify that the review entry is successfully added upon completion of clicking the 'Add' button.
 
-3. Review Form - Edit Review:
-    i) Go to the "Reviews - All Reviews" page
+
+#### 3. Review Form - Edit Review:
+
+    i) Go to the "Reviews - All Reviews" page.
+    
     ii) Click the 'Edit' button for selected review to edit and verify that the page with the review form will show with all fields displaying the existing content.
+    
     iii) Make amendments to the content with the visit date field left empty and verify that a message will appear to prompt the user to fill up the visit date field.
+    
     iv) Make amendments to the content with the name field left empty and verify that a message will appear to prompt the user to fill up the name field.
+    
     v) Make amendments to the content with the rating field left unselected for a number and verify that a message will appear to prompt the user to select the rating.
+    
     vi) Try to submit the form with all inputs amended and completed except for the comment field and verify that the review entry is successfully updated upong clicking the 'Update' button.
-    vii) Try to submit the form with all inputs amended and completed and verify that the review entry is successfully updated upong clicking the 'Update' button. The page will redirect to the 'All Reviews' page, and the updated review will appear on the 'All Reviews' page.
+    
+    vii) Try to submit the form with all inputs amended and completed and verify that the review entry is successfully updated upon clicking the 'Update' button. The page will redirect to the 'All Reviews' page, and the updated review will appear on the 'All Reviews' page.
+    
     viii) Click the 'Cancel' button and verify that the 'All Reviews' page will be returned. 
 
-4. Review Form - Delete Review:
-    i) Go to the "Reviews - All Reviews" page
+
+#### 4. Review Form - Delete Review:
+
+    i) Go to the "Reviews - All Reviews" page.
+    
     ii) Click the 'Delete' button for selected review to be deleted and verify that the page will be directed to a 'Deletion Confirmation' page that states the details of the review that is intended for deletion.
+    
     iii) Click on the 'No' button and verify that the page will be directed to the 'All Reviews' page.
+    
     iv) Click on the 'Yes' button and verify that the review is successfully deleted. The page will direct to the'All Reviews' page, and the deleted review will not appear on the 'All Reviews' page.
     
-5. Mobile Responsive:
+    
+#### 5. Mobile Responsive:
+
 All pages have been checked on smaller devices to ensure that they are presentably displayed as mobile responsive.
 
-6. Bugs Encountered: 
+
+#### 6. Bugs Encountered: 
+
 Upon deployment to heroku, the page would not display itself upon adding, editing and deleting a review due to an "Internal Server Error 500" issue. The issue was rectified by removing the Flask Flash Message function initially implemented for notification messages, but which only worked during testing on Cloud9.
 
+
 ---
+
 
 ## Deployment
 
@@ -181,13 +224,16 @@ The project was developed on [AWS Cloud9.] (https://aws.amazon.com/education/aws
 The project had been deployed on [Heroku.] (https://msp-restaurant.herokuapp.com/)
 The coding and documentation may be found on [GitHub.] (https://github.com/amcali/sofias_bistro)
 
+
 ---
+
 
 ## Credits
 
 The following resources have been used for this project:
 
-1. Pictures: All pictures in this project are from Pexels:
+#### 1. Pictures: 
+All pictures in this project are from Pexels:
 https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
 https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
 https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
@@ -202,16 +248,16 @@ https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
 https://www.pexels.com/photo/cake-chocolate-chocolate-cake-cocoa-373066/
 
 
-4. Mongo Documentation
+#### 4. Mongo Documentation
 https://docs.mongodb.com/manual/reference/operator/query/eq/
 
-5. Pymongo documentation
+#### 5. Pymongo documentation
 https://api.mongodb.com/python/current/examples/aggregation.html
 
-6. Bootstrap template
+#### 6. Bootstrap template
 https://colorlib.com/wp/template/feliciano/
 
-7. Jumbotron positioning on home page
+#### 7. Jumbotron positioning on home page
 https://stackoverflow.com/questions/42252443/vertical-align-center-in-bootstrap-4
 
 
