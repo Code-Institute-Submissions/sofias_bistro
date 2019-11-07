@@ -20,30 +20,33 @@ The website is for essentially for three types of target audiences: customers, w
 These are any individuals who had and regularly visit the bistro, the website's contents and UX intends to provide an feature to allow customers to share their dining experience.
 
 *UX Scenarios as a Customer:*
-- a) As a user who has visited the restaurant, click the 'Review' navigation dropdown tab, and then click on the 'Add Review' so to be able to complete the review form to provide my dining experience.
 
-- b) As a website visitor who has submitted a review and wishes to make amendments to it, click on the 'Review' navigation dropdown tab, and click on the 'Edit' button for the respective review to be amended. This will display the stored contents of the review in the format of the form. After making the necessary amendments, click on the 'Edit' button. The website site will then redirect to the 'All Reviews' page and display a notification that the review was successfully updated, which will be visible on that page.
+a) As a user who has visited the restaurant, click the 'Review' navigation dropdown tab, and then click on the 'Add Review' so to be able to complete the review form to provide my dining experience.
 
-- c) As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
+b) As a website visitor who has submitted a review and wishes to make amendments to it, click on the 'Review' navigation dropdown tab, and click on the 'Edit' button for the respective review to be amended. This will display the stored contents of the review in the format of the form. After making the necessary amendments, click on the 'Edit' button. The website site will then redirect to the 'All Reviews' page and display a notification that the review was successfully updated, which will be visible on that page.
+
+c) As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
 
 
 #### ii) Website Visitors
 This defines any individuals who visit the website, and do not know about the bistro.
 
-_UX Scenarios as a Website Visitor:
-  a) As a website visitor, I will access the website url, which will take me to the homepage. I will be able to comprehend business nature of the website owner from the website name and the visual presentation.
+*UX Scenarios as a Website Visitor:*
 
-  b) As a website visitor, I will click the 'About' navigation tab so as to get an understanding of the business nature of the website owner, and also access the website owner's contact details.
+a) As a website visitor, I will access the website url, which will take me to the homepage. I will be able to comprehend business nature of the website owner from the website name and the visual presentation.
 
-  c) As a website visitor, click the 'Menu' navigation tab which will show me the type of food the bistro sells. This will serve the purpose of me to make the decision if the menu is what I would like to consider if I am choosing an eating establishment to visit.
+b) As a website visitor, I will click the 'About' navigation tab so as to get an understanding of the business nature of the website owner, and also access the website owner's contact details.
 
-  d) As a website visitor, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me further insight to making a decision on whether to consider visitng the bistro.
+c) As a website visitor, click the 'Menu' navigation tab which will show me the type of food the bistro sells. This will serve the purpose of me to make the decision if the menu is what I would like to consider if I am choosing an eating establishment to visit.
+
+d) As a website visitor, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me further insight to making a decision on whether to consider visitng the bistro.
 
 
 #### iii) Business Owners
 The owners of the bistro would be able to view the reviews from its customers, and use the website to display what the bistro has to offer.
 
-_UX Scenarios as a Website Visitor:
+*UX Scenarios as a Website Visitor:*
+
 As the website's business owner, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me insight from customers' inputs to factor in ideas for future implementaion plans to expand the business.
 
 
