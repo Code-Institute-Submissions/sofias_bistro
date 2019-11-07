@@ -19,12 +19,12 @@ The website is for essentially for three types of target audiences: customers, w
 #### i) Customers 
 These are any individuals who had and regularly visit the bistro, the website's contents and UX intends to provide an feature to allow customers to share their dining experience.
 
-_UX Scenarios as a Customer:
-  a) As a user who has visited the restaurant, click the 'Review' navigation dropdown tab, and then click on the 'Add Review' so to be able to complete the review form to provide my dining experience.
+*UX Scenarios as a Customer:*
+- a) As a user who has visited the restaurant, click the 'Review' navigation dropdown tab, and then click on the 'Add Review' so to be able to complete the review form to provide my dining experience.
 
-  b) As a website visitor who has submitted a review and wishes to make amendments to it, click on the 'Review' navigation dropdown tab, and click on the 'Edit' button for the respective review to be amended. This will display the stored contents of the review in the format of the form. After making the necessary amendments, click on the 'Edit' button. The website site will then redirect to the 'All Reviews' page and display a notification that the review was successfully updated, which will be visible on that page.
+- b) As a website visitor who has submitted a review and wishes to make amendments to it, click on the 'Review' navigation dropdown tab, and click on the 'Edit' button for the respective review to be amended. This will display the stored contents of the review in the format of the form. After making the necessary amendments, click on the 'Edit' button. The website site will then redirect to the 'All Reviews' page and display a notification that the review was successfully updated, which will be visible on that page.
 
-  c) As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
+- c) As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
 
 
 #### ii) Website Visitors
