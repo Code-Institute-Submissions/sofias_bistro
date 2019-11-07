@@ -14,7 +14,7 @@
         <!--calling of form fields from the template-->
         {%include "review_form.template.html"%}
         <!--To store review in the 'Reviews' collection-->
-        <input type='submit' value='Update' class='btn btn-primary' />
+        <input type='submit' value='Update' class='btn btn-primary' data-toggle="modal" data-target="#exampleModal" />
         <!--Returns to 'All Reviews' page without any input storage to 'Reviews' collection-->
         <a class="btn btn-primary" href="{{url_for('see_all_reviews')}}">Cancel</a>         
     </form> 

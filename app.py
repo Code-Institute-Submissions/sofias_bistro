@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, get_flashed_messages, jsonify 
-import smtplib
+from flask import Flask, render_template, request, redirect, url_for, jsonify 
 import os
 import pymongo
 import re
@@ -28,6 +27,7 @@ all_menu_items = conn[DATABASE_NAME][MENU].find()
 
 
 """ Flask Routes Begin Here """
+
 
 """ Routing to display Index (Home) Page """
 @app.route('/')
@@ -63,9 +63,6 @@ def menu():
 """ Routing to display the 'All Reviews' Page. All reviews are stored in documents in the 'REVIEWS' collection. """
 @app.route('/reviews')
 def see_all_reviews(): 
-    
-    """This serves to flash messages on the 'All Reviews' Page when user successfully creates(add), edits or deletes a review."""
-    # messages = get_flashed_messages()  
 
     """Fetch all reviews and display them according to visit date"""
     all_reviews = conn[DATABASE_NAME][REVIEWS].find({}).sort('date', pymongo.DESCENDING)
@@ -96,9 +93,6 @@ def process_add_review():
         'rating': rating,
         'comment': comment
     })
-    
-    """ Message flashes upon sucessful creation of review. """
-    # flash("Review successfully created")
     
     
     """ User is redirected to the 'All Reviews' Page after document is inserted into the collection """
@@ -140,8 +134,6 @@ def process_edit_review(review_id):
         }
     })
 
-    """ Message flashes upon sucessful update of review. """
-    # flash("Review successfully updated")
 
     """ User is redirected to 'All Reviews' Page """
     return redirect(url_for('see_all_reviews'))    
@@ -182,9 +174,6 @@ def delete_review(review_id):
 
 # Flask boilerplate and calling constants for message flash
 if __name__ == '__main__':
-
-    app.secret_key = os.getenv('SECRET_KEY')
-    app.config['SESSION_TYPE'] = os.getenv('SESSION_TYPE')
     
     app.run(host=os.environ.get('IP'),
            port=int(os.environ.get('PORT')),
