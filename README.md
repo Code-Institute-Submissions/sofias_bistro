@@ -5,7 +5,7 @@ Sofia's Bistro is a fictional bistro. The ideology behind the bistro's existence
 
 The link to the project may be found [here.](https://msp-restaurant.herokuapp.com/ "Sofia's Bistro")
 
-
+---
 
 ## UX
 
@@ -22,7 +22,8 @@ iii) Business Owners - The owners of the bistro would be able to view the review
 The following scenarios illustrate how the website's existing features to serves its target audiences.
 
 
-### 1) Customers
+
+#### 1) Customers
 
 As a user who has visited the restaurant, click the 'Review' navigation dropdown tab, and then click on the 'Add Review' so to be able to complete the review form to provide my dining experience.
 
@@ -31,7 +32,8 @@ As a website visitor who has submitted a review and wishes to make amendments to
 As a website visitor who wishes to delete a review, click on the 'Review' navigation dropdown tab, and click on the 'Delete' button. The page will direct to a notification page to ask the user if they wish to delete the review. Click on 'Yes' button will have the review deleted. The site will redirect to the 'All Reviews' page and display a notification that states the review was successfully deleted.
 
 
-### 2) Website Visitors
+
+#### 2) Website Visitors
 
 As a website visitor, I will access the website url, which will take me to the homepage. I will be able to comprehend business nature of the website owner from the website name and the visual presentation.
 
@@ -42,11 +44,12 @@ As a website visitor, click the 'Menu' navigation tab which will show me the typ
 As a website visitor, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me further insight to making a decision on whether to consider visitng the bistro.
 
 
-### 3) Business Owners
+
+#### 3) Business Owners
 
 As the website's business owner, I will click the 'Review' navigation dropdown tab, and then click on the 'All Reviews' to have an understanding of how customers have found the bistro to be. This will give me insight from customers' inputs to factor in ideas for future implementaion plans to expand the business.
 
-
+---
 
 ## Features
 
@@ -88,7 +91,7 @@ The features that are considered for future implementation are as follows:
 - To have notification messages to appear when the user successfully adds, edits or delete
 - Admin account access for the business owner to be able to provide updates on the website with regards to their bistro. Such updates would be any menu changes, or promotional features.
 
-
+---
 
 ## Technologies Used
 
@@ -125,7 +128,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Python](https://www.python.org/)
     - The project uses **Python** website resources to develop the coding used.
 
-
+---
 
 ## Testing
 
@@ -170,6 +173,7 @@ All pages have been checked on smaller devices to ensure that they are presentab
 6. Bugs Encountered: 
 Upon deployment to heroku, the page would not display itself upon adding, editing and deleting a review due to an "Internal Server Error 500" issue. The issue was rectified by removing the Flask Flash Message function initially implemented for notification messages, but which only worked during testing on Cloud9.
 
+---
 
 ## Deployment
 
@@ -177,6 +181,7 @@ The project was developed on [AWS Cloud9.] (https://aws.amazon.com/education/aws
 The project had been deployed on [Heroku.] (https://msp-restaurant.herokuapp.com/)
 The coding and documentation may be found on [GitHub.] (https://github.com/amcali/sofias_bistro)
 
+---
 
 ## Credits
 
@@ -187,22 +192,14 @@ https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
 https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
 https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
 https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
+https://www.pexels.com/photo/cooked-food-on-black-bowl-688804/
 https://www.pexels.com/photo/seashell-dish-921374/
-https://www.pexels.com/photo/pizza-slice-842519/
+https://www.pexels.com/photo/pizza-with-red-pepper-and-cheese-1049620/
 https://www.pexels.com/photo/pizza-on-brown-wooden-board-825661/
 https://www.pexels.com/photo/close-up-of-meal-served-in-plate-323682/
-
-(desserts):
+https://www.pexels.com/photo/brown-fish-fillet-on-white-ceramic-plate-46239/
 https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
-https://www.pexels.com/photo/food-restaurant-summer-nuts-2424/
-
-(beverages):
-https://www.pexels.com/photo/background-blur-bread-breakfast-364109/
-https://www.pexels.com/photo/shallow-focus-photography-of-cafe-late-982612/
-https://www.pexels.com/photo/clear-glass-bottle-filled-with-broccoli-shake-1346347/
-https://www.pexels.com/photo/shake-in-a-glass-990439/
-https://www.pexels.com/photo/art-beverage-blur-caffeine-302896/
-https://www.pexels.com/photo/clear-highball-glass-with-iced-tea-1484678/
+https://www.pexels.com/photo/cake-chocolate-chocolate-cake-cocoa-373066/
 
 
 4. Mongo Documentation
@@ -249,4 +246,4 @@ I received inspiration for this project from the following:
 [Buon Appetito Italian Restaurant & Delicatessens](https://buonappetitoitalian.com/menus/lunch-menu)
 [Zomato](https://www.zomato.com/)
 
-**All content used and deployed for this project is purely for educational purposes.
+**All content used and deployed in this project is solely used for educational purposes.
