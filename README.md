@@ -105,7 +105,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [HTML](https://html.com/)
     - The project uses **HTML** for the markup language of all HTML pages.
 
-- [CSS](https://www.w3.org/Style/CSS/Overview.en.html/)
+- [CSS](https://www.w3.org/Style/CSS/)
     - The project uses **CSS** to for basic styling of the web pages.
 
 - [Bootstrap](https://getbootstrap.com/)
@@ -121,13 +121,10 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - The project uses **MongoDB** to hold the database in which some of the web page contents are stored.
 
 - [GitHub](https://github.com/)
-    - The project uses **GitHub** to document the development and coding.
+    - The project uses **GitHub** to document its development and coding.
 
 - [Heroku](https://heroku.com/)
     - The project uses **Heroku** to deploy the website.
-
-- [W3 Schools](https://www.w3schools.com/)
-    - The project uses **W3 Schools** resources to create the HTML, CSS and Bootstrap features implemented.
 
 - [Python](https://www.python.org/)
     - The project uses **Python** website resources to develop the coding used.
@@ -217,9 +214,9 @@ Upon deployment to heroku, the page would not display itself upon adding, editin
 
 ## Deployment
 
-The project was developed on [AWS Cloud9.] (https://aws.amazon.com/education/awseducate/)
-The project had been deployed on [Heroku.] (https://msp-restaurant.herokuapp.com/)
-The coding and documentation may be found on [GitHub.] (https://github.com/amcali/sofias_bistro)
+- The project was developed on [AWS Cloud9.](https://aws.amazon.com/education/awseducate/)
+- The project had been deployed on [Heroku.](https://msp-restaurant.herokuapp.com/)
+- The coding and documentation may be found on [GitHub.](https://github.com/amcali/sofias_bistro)
 
 
 ---
@@ -231,18 +228,18 @@ The following resources have been used for this project:
 
 #### 1. Pictures: 
 All pictures in this project are from Pexels:
-https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
-https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
-https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
-https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
-https://www.pexels.com/photo/cooked-food-on-black-bowl-688804/
-https://www.pexels.com/photo/seashell-dish-921374/
-https://www.pexels.com/photo/pizza-with-red-pepper-and-cheese-1049620/
-https://www.pexels.com/photo/pizza-on-brown-wooden-board-825661/
-https://www.pexels.com/photo/close-up-of-meal-served-in-plate-323682/
-https://www.pexels.com/photo/brown-fish-fillet-on-white-ceramic-plate-46239/
-https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
-https://www.pexels.com/photo/cake-chocolate-chocolate-cake-cocoa-373066/
+- https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
+- https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
+- https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
+- https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
+- https://www.pexels.com/photo/cooked-food-on-black-bowl-688804/
+- https://www.pexels.com/photo/seashell-dish-921374/
+- https://www.pexels.com/photo/pizza-with-red-pepper-and-cheese-1049620/
+- https://www.pexels.com/photo/pizza-on-brown-wooden-board-825661/
+- https://www.pexels.com/photo/close-up-of-meal-served-in-plate-323682/
+- https://www.pexels.com/photo/brown-fish-fillet-on-white-ceramic-plate-46239/
+- https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
+- https://www.pexels.com/photo/cake-chocolate-chocolate-cake-cocoa-373066/
 
 
 #### 4. Mongo Documentation
@@ -251,8 +248,8 @@ https://docs.mongodb.com/manual/reference/operator/query/eq/
 #### 5. Pymongo documentation
 https://api.mongodb.com/python/current/examples/aggregation.html
 
-#### 6. Bootstrap template
-https://colorlib.com/wp/template/feliciano/
+#### 6. W3 Schools
+https://www.w3schools.com/
 
 #### 7. Jumbotron positioning on home page
 https://stackoverflow.com/questions/42252443/vertical-align-center-in-bootstrap-4
@@ -268,25 +265,26 @@ Home Page:
 https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
 
 Menu Page:
-https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
-https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
-https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
-https://www.pexels.com/photo/cooked-food-on-black-bowl-688804/
-https://www.pexels.com/photo/seashell-dish-921374/
-https://www.pexels.com/photo/pizza-with-red-pepper-and-cheese-1049620/
-https://www.pexels.com/photo/pizza-on-brown-wooden-board-825661/
-https://www.pexels.com/photo/close-up-of-meal-served-in-plate-323682/
-https://www.pexels.com/photo/brown-fish-fillet-on-white-ceramic-plate-46239/
-https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
-https://www.pexels.com/photo/cake-chocolate-chocolate-cake-cocoa-373066/
+- https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
+- https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
+- https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
+- https://www.pexels.com/photo/cooked-food-on-black-bowl-688804/
+- https://www.pexels.com/photo/seashell-dish-921374/
+- https://www.pexels.com/photo/pizza-with-red-pepper-and-cheese-1049620/
+- https://www.pexels.com/photo/pizza-on-brown-wooden-board-825661/
+- https://www.pexels.com/photo/close-up-of-meal-served-in-plate-323682/
+- https://www.pexels.com/photo/brown-fish-fillet-on-white-ceramic-plate-46239/
+- https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
+- https://www.pexels.com/photo/cake-chocolate-chocolate-cake-cocoa-373066/
 
-All written content on all the webpages are self created. The menu names were generated from research via [Google](https://www.google.com/). The contact details on the [About](https://msp-restaurant.herokuapp.com/about) page is fictional.
+- All written content on all the webpages are self created. The menu names were generated from research via [Google](https://www.google.com/).
+- The contact details on the [About](https://msp-restaurant.herokuapp.com/about) page is fictional.
 
 
 ### Acknowledgements
 
 I received inspiration for this project from the following:
-[Buon Appetito Italian Restaurant & Delicatessens](https://buonappetitoitalian.com/menus/lunch-menu)
-[Zomato](https://www.zomato.com/)
+- [Buon Appetito Italian Restaurant & Delicatessens](https://buonappetitoitalian.com/menus/lunch-menu)
+- [Zomato](https://www.zomato.com/)
 
 **All content used and deployed in this project is solely used for educational purposes.
