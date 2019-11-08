@@ -261,10 +261,11 @@ https://stackoverflow.com/questions/42252443/vertical-align-center-in-bootstrap-
 ### Media
 - The photos used in this site were obtained from [Pexels.](https://www.pexels.com/)
 
-Home Page: 
-https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
+#### Home Page: 
+- https://www.pexels.com/photo/clear-wine-glass-on-table-67468/
 
-Menu Page:
+
+#### Menu Page:
 - https://www.pexels.com/photo/bread-cooking-cuisine-delicious-299410/
 - https://www.pexels.com/photo/appetizer-avocado-bacon-cuisine-551997/
 - https://www.pexels.com/photo/appetizer-basil-caprese-cheese-416510/
@@ -277,7 +278,9 @@ Menu Page:
 - https://www.pexels.com/photo/restaurant-coffee-chocolate-dessert-2230/
 - https://www.pexels.com/photo/cake-chocolate-chocolate-cake-cocoa-373066/
 
+
 - All written content on all the webpages are self created. The menu names were generated from research via [Google](https://www.google.com/).
+
 - The contact details on the [About](https://msp-restaurant.herokuapp.com/about) page is fictional.
 
 
